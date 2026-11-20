@@ -3,7 +3,7 @@
 Source code and data for the paper "Verifiable Ingestion of Acknowledged Provenance Events on Managed Cloud Services"
 by Md Shohel Khan, Rubaiyat Sha Fardin Siam and Muhammad Abdullah Adnan.
 
-Archived on Zenodo: https://doi.org/10.5281/zenodo.24404748
+Archived on Zenodo: https://doi.org/10.5281/zenodo.24404927
 
 The API acknowledges an event when Kafka has it and returns a signed receipt with the broker
 position. Writers append the event to the tenant's log (MMR), anchor the log in write-once storage,
