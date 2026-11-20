@@ -170,4 +170,5 @@ acknowledgement to anchor.
 
 ## License
 
-MIT, see `LICENSE`.
+The code is under the MIT License, see `LICENSE`. The data in `results/` is under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0), see `LICENSE-DATA`.
