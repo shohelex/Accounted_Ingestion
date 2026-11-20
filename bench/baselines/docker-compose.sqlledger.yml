@@ -1,0 +1,78 @@
+# Baseline: SQL Server 2022 ledger (an append-only ledger table), and the sink that feeds it from the
+# pipeline's Kafka topic (sqlledger_sink.py). Start deploy/docker-compose.yml with ACCT_MODE=false WRITERS=0
+# (the sinks replace the writers), then:
+#   MSSQL_PASSWORD=<sa password> LEDGER_SINKS=1 docker compose -f bench/baselines/docker-compose.sqlledger.yml up -d --build
+# It joins the pipeline's network (PIPELINE_NETWORK, default deploy_default); ledger-setup creates the
+# database and table (sqlledger_admin.py setup) before the sinks start; SQL Server listens on 127.0.0.1:1433.
+# The service is `ledgersink`, not `sink`, so it does not collide with the immudb baseline's service.
+x-ledgersink-build: &ledgersink-build
+  context: ../..
+  dockerfile_inline: |
+    FROM python:3.12-slim
+    WORKDIR /app
+    # pymssql 2.4.1 deadlocks on a connection whose session the server killed (sqlledger_common.py).
+    RUN pip install --no-cache-dir aiokafka==0.12.0 pydantic==2.12.2 pymssql==2.4.0
+    COPY schemas.py /app/
+    COPY crypto /app/crypto
+    COPY bench/baselines /app/bench/baselines
+
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-CU27-ubuntu-22.04
+    container_name: mssql
+    restart: unless-stopped
+    environment:
+      ACCEPT_EULA: "Y"
+      # Developer edition: licensed for development and test. Ledger is in every edition of SQL Server 2022.
+      MSSQL_PID: "Developer"
+      MSSQL_SA_PASSWORD: "${MSSQL_PASSWORD:?set MSSQL_PASSWORD}"
+      # SQL Server takes 80% of the machine's memory by default. Everything else is at the defaults,
+      # including full durability (a commit waits for its log flush).
+      MSSQL_MEMORY_LIMIT_MB: "${MSSQL_MEMORY_LIMIT_MB:-12288}"
+    ports:
+      - "127.0.0.1:1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -C -S localhost -U sa -P \"$$MSSQL_SA_PASSWORD\" -b -Q 'SELECT 1' -o /dev/null"]
+      interval: 10s
+      timeout: 8s
+      retries: 30
+      start_period: 30s
+
+  ledger-setup:
+    build: *ledgersink-build
+    image: baseline-ledgersink:latest
+    command: ["python", "/app/bench/baselines/sqlledger_admin.py", "--addr", "mssql:1433", "setup"]
+    environment:
+      MSSQL_PASSWORD: "${MSSQL_PASSWORD:?set MSSQL_PASSWORD}"
+      MSSQL_DATABASE: "acct_ledger"
+    depends_on:
+      mssql: {condition: service_healthy}
+
+  ledgersink:
+    build: *ledgersink-build
+    image: baseline-ledgersink:latest
+    restart: unless-stopped
+    command: ["python", "/app/bench/baselines/sqlledger_sink.py"]
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: '["kafka:9092"]'
+      KAFKA_TOPIC: "provenance-events"
+      KAFKA_SESSION_TIMEOUT_MS: "${KAFKA_SESSION_TIMEOUT_MS:-45000}"
+      MSSQL_ADDR: "mssql:1433"
+      MSSQL_PASSWORD: "${MSSQL_PASSWORD:?set MSSQL_PASSWORD}"
+      MSSQL_DATABASE: "acct_ledger"
+      SINK_BATCH: "${SINK_BATCH:-32}"
+      SINK_GROUP: "sqlledger-sink"
+    depends_on:
+      ledger-setup: {condition: service_completed_successfully}
+    deploy:
+      replicas: ${LEDGER_SINKS:-1}
+
+networks:
+  default:
+    name: ${PIPELINE_NETWORK:-deploy_default}
+    external: true
+
+volumes:
+  mssql_data:

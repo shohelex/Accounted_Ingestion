@@ -1,0 +1,1 @@
+{"mode": "c2", "rate": 12000, "partitions": 32, "partition_cap_q": 45000, "total_cap": 1440000, "q_window_s": 120}

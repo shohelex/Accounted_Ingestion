@@ -1,0 +1,48 @@
+# t 1795183453.427845776
+cpu app1 dhakir-maker 9486445
+cpu app1 dhakir-api 1978316195
+cpu app2 compose-worker-31 62090127
+cpu app2 compose-worker-23 54235213
+cpu app2 compose-worker-8 88809021
+cpu app2 compose-worker-12 46787361
+cpu app2 compose-worker-5 111125293
+cpu app2 compose-worker-29 47766048
+cpu app2 compose-worker-9 99672436
+cpu app2 compose-worker-18 18240789
+cpu app2 compose-worker-27 101025089
+cpu app2 compose-worker-32 113365064
+cpu app2 compose-worker-15 74169523
+cpu app2 compose-worker-24 59535769
+cpu app2 compose-worker-28 73053928
+cpu app2 compose-worker-22 32413493
+cpu app2 compose-worker-1 74937843
+cpu app2 compose-worker-14 60585663
+cpu app2 compose-worker-4 74368020
+cpu app2 compose-worker-11 46754340
+cpu app2 compose-worker-2 73480278
+cpu app2 compose-worker-3 87106049
+cpu app2 compose-worker-13 45820165
+cpu app2 compose-worker-17 85832079
+cpu app2 compose-worker-26 74711732
+cpu app2 compose-worker-7 73664072
+cpu app2 compose-worker-21 111742799
+cpu app2 compose-worker-19 59534773
+cpu app2 compose-worker-20 60531720
+cpu app2 compose-worker-30 123096502
+cpu app2 compose-worker-25 86306487
+cpu app2 compose-worker-16 59770574
+cpu app2 compose-worker-6 111092424
+cpu app2 compose-worker-10 59783366
+cpu infra dhakir-redis 111279788
+cpu infra dhakir-influx 7001365
+cpu infra dhakir-kafka 3572420911
+cpu infra dhakir-minio 6493079511
+cpu db dhakir-neo4j 9849428021
+neo4j_bytes /data/databases/neo4j 10021953110
+neo4j_bytes /data/transactions/neo4j 9459837239
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 876912
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 876912
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 12185
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 1.761347e+06
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 577651

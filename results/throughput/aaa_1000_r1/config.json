@@ -1,0 +1,49 @@
+{
+ "sweep": "ceiling.sh",
+ "commit": "3e016e8fc373101f157abe6dae1628f5630ad27c",
+ "written": "2026-11-20T15:45:38+0000",
+ "brokers_declared": {
+  "n_brokers": 1,
+  "hosts": [
+   "10.10.1.2"
+  ],
+  "bootstrap": [
+   "10.10.1.2:9092"
+  ],
+  "replication_factor": 1,
+  "min_insync_replicas": 1
+ },
+ "brokers_live": {
+  "queried": true,
+  "quorum_voters": [
+   1
+  ]
+ },
+ "parameters": {
+  "PARTITIONS": "32",
+  "WORKERS": "12",
+  "CONSUMERS": "0",
+  "CONSUMERS2": "32",
+  "EMITPROCS": "6",
+  "RATE": "600",
+  "RATES": "1000",
+  "TENANTS": "128",
+  "TLIST": "1 4 16 64",
+  "REPS": "2",
+  "B": "256",
+  "K": "1000",
+  "G": "256",
+  "CONC": "512",
+  "LAGCAP": "10000",
+  "DUR": "210",
+  "WARM": "60",
+  "MODE": "aaa",
+  "ACCT_PERIOD": "90",
+  "ACCT_THETA": "180",
+  "MAXAGE": "30",
+  "STAGE_TIMING": "1",
+  "AUDIT_MODE": "sampled"
+ },
+ "consistent": true,
+ "problems": []
+}

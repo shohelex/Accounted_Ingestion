@@ -1,0 +1,48 @@
+# t 1795184943.504902927
+cpu app1 dhakir-maker 7669323
+cpu app1 dhakir-api 2667343294
+cpu app2 compose-worker-11 74436059
+cpu app2 compose-worker-7 85457046
+cpu app2 compose-worker-14 85945837
+cpu app2 compose-worker-8 117078539
+cpu app2 compose-worker-32 85061147
+cpu app2 compose-worker-16 85477896
+cpu app2 compose-worker-25 131392582
+cpu app2 compose-worker-26 85360239
+cpu app2 compose-worker-22 51500222
+cpu app2 compose-worker-23 102496819
+cpu app2 compose-worker-20 68985703
+cpu app2 compose-worker-2 15549311
+cpu app2 compose-worker-3 51399732
+cpu app2 compose-worker-31 146715548
+cpu app2 compose-worker-1 68164748
+cpu app2 compose-worker-30 68580980
+cpu app2 compose-worker-5 130470194
+cpu app2 compose-worker-17 51319385
+cpu app2 compose-worker-12 100648440
+cpu app2 compose-worker-13 99433326
+cpu app2 compose-worker-28 100576283
+cpu app2 compose-worker-27 84458885
+cpu app2 compose-worker-4 69031638
+cpu app2 compose-worker-21 131725755
+cpu app2 compose-worker-6 50170141
+cpu app2 compose-worker-15 117572942
+cpu app2 compose-worker-19 67659551
+cpu app2 compose-worker-9 50407270
+cpu app2 compose-worker-29 32869024
+cpu app2 compose-worker-24 84252761
+cpu app2 compose-worker-18 68397689
+cpu app2 compose-worker-10 131151742
+cpu infra dhakir-redis 246927605
+cpu infra dhakir-influx 44174287
+cpu infra dhakir-kafka 4121524276
+cpu infra dhakir-minio 7271163667
+cpu db dhakir-neo4j 11482605722
+neo4j_bytes /data/databases/neo4j 10066122780
+neo4j_bytes /data/transactions/neo4j 6509316894
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 972806
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 972806
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 13573
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 1.92324e+06
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 639374

@@ -1,0 +1,48 @@
+# t 1795191046.215610386
+cpu app1 dhakir-maker 11452797
+cpu app1 dhakir-api 2836661037
+cpu app2 compose-worker-20 52783771
+cpu app2 compose-worker-11 47584067
+cpu app2 compose-worker-12 32993461
+cpu app2 compose-worker-18 37387315
+cpu app2 compose-worker-14 28146229
+cpu app2 compose-worker-6 51974096
+cpu app2 compose-worker-17 41382807
+cpu app2 compose-worker-25 56578138
+cpu app2 compose-worker-22 58991808
+cpu app2 compose-worker-27 37463149
+cpu app2 compose-worker-1 37041239
+cpu app2 compose-worker-23 51793249
+cpu app2 compose-worker-19 32446656
+cpu app2 compose-worker-8 23246157
+cpu app2 compose-worker-3 32267917
+cpu app2 compose-worker-32 19362040
+cpu app2 compose-worker-16 27941148
+cpu app2 compose-worker-13 51298225
+cpu app2 compose-worker-5 35510084
+cpu app2 compose-worker-7 31915388
+cpu app2 compose-worker-9 31546834
+cpu app2 compose-worker-2 27787710
+cpu app2 compose-worker-31 36453919
+cpu app2 compose-worker-26 41396183
+cpu app2 compose-worker-28 36056002
+cpu app2 compose-worker-29 41013632
+cpu app2 compose-worker-24 36585352
+cpu app2 compose-worker-10 31000692
+cpu app2 compose-worker-21 31487408
+cpu app2 compose-worker-15 27055208
+cpu app2 compose-worker-4 26743543
+cpu app2 compose-worker-30 41965926
+cpu infra dhakir-redis 454670034
+cpu infra dhakir-influx 93511378
+cpu infra dhakir-kafka 6471780393
+cpu infra dhakir-minio 10068962918
+cpu db dhakir-neo4j 12621808438
+neo4j_bytes /data/databases/neo4j 10022001246
+neo4j_bytes /data/transactions/neo4j 3029534877
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 1.85459e+06
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 1.85459e+06
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 15605
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 2.657831e+06
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 768316

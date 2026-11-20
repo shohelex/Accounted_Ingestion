@@ -1,0 +1,48 @@
+# t 1795190557.158394936
+cpu app1 dhakir-maker 568228
+cpu app1 dhakir-api 135626769
+cpu app2 compose-worker-20 11540087
+cpu app2 compose-worker-11 11442904
+cpu app2 compose-worker-12 11990778
+cpu app2 compose-worker-18 11208134
+cpu app2 compose-worker-14 11411928
+cpu app2 compose-worker-6 11260301
+cpu app2 compose-worker-17 10921387
+cpu app2 compose-worker-25 11119383
+cpu app2 compose-worker-22 11181688
+cpu app2 compose-worker-27 11121927
+cpu app2 compose-worker-1 11055927
+cpu app2 compose-worker-23 11004007
+cpu app2 compose-worker-19 10890855
+cpu app2 compose-worker-8 10879087
+cpu app2 compose-worker-3 10894643
+cpu app2 compose-worker-32 10822035
+cpu app2 compose-worker-16 10651817
+cpu app2 compose-worker-13 10819528
+cpu app2 compose-worker-5 10526633
+cpu app2 compose-worker-7 10419280
+cpu app2 compose-worker-9 10671005
+cpu app2 compose-worker-2 10709219
+cpu app2 compose-worker-31 10634842
+cpu app2 compose-worker-26 10327938
+cpu app2 compose-worker-28 10167416
+cpu app2 compose-worker-29 10372844
+cpu app2 compose-worker-24 10418663
+cpu app2 compose-worker-10 10123957
+cpu app2 compose-worker-21 9719699
+cpu app2 compose-worker-15 10098959
+cpu app2 compose-worker-4 9888005
+cpu app2 compose-worker-30 9815443
+cpu infra dhakir-redis 450451540
+cpu infra dhakir-influx 93137088
+cpu infra dhakir-kafka 6333639610
+cpu infra dhakir-minio 9290963395
+cpu db dhakir-neo4j 12479577284
+neo4j_bytes /data/databases/neo4j 10074144940
+neo4j_bytes /data/transactions/neo4j 2492411341
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 1.470123e+06
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 1.470123e+06
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 14598
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 2.334797e+06
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 736950

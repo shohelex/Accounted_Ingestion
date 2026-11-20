@@ -1,0 +1,48 @@
+# t 1795178782.022757618
+cpu app1 dhakir-maker 13321058
+cpu app1 dhakir-api 2801499292
+cpu app2 compose-worker-11 115139270
+cpu app2 compose-worker-1 56159525
+cpu app2 compose-worker-30 107036019
+cpu app2 compose-worker-8 108352926
+cpu app2 compose-worker-26 140272368
+cpu app2 compose-worker-29 140841320
+cpu app2 compose-worker-31 75465659
+cpu app2 compose-worker-28 54207862
+cpu app2 compose-worker-22 75387171
+cpu app2 compose-worker-10 91371239
+cpu app2 compose-worker-9 124474302
+cpu app2 compose-worker-17 37862349
+cpu app2 compose-worker-7 138870390
+cpu app2 compose-worker-25 18593330
+cpu app2 compose-worker-24 107612912
+cpu app2 compose-worker-32 90997136
+cpu app2 compose-worker-2 155521842
+cpu app2 compose-worker-27 74579122
+cpu app2 compose-worker-16 73642462
+cpu app2 compose-worker-19 56408442
+cpu app2 compose-worker-13 122278501
+cpu app2 compose-worker-20 55232409
+cpu app2 compose-worker-4 91724004
+cpu app2 compose-worker-6 55018068
+cpu app2 compose-worker-21 73261555
+cpu app2 compose-worker-15 91918981
+cpu app2 compose-worker-3 90021855
+cpu app2 compose-worker-23 139088002
+cpu app2 compose-worker-14 92173327
+cpu app2 compose-worker-5 73544534
+cpu app2 compose-worker-18 91067904
+cpu app2 compose-worker-12 73831776
+cpu infra dhakir-redis 62414085
+cpu infra dhakir-influx 4484102
+cpu infra dhakir-kafka 2021530303
+cpu infra dhakir-minio 3538616262
+cpu db dhakir-neo4j 5741964000
+neo4j_bytes /data/databases/neo4j 10031814248
+neo4j_bytes /data/transactions/neo4j 6612939102
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 483022
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 483022
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 6828
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 1.010776e+06
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 328574

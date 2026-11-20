@@ -1,0 +1,3 @@
+uvloop==0.21.0; sys_platform != "win32"
+immudb-py==1.5.0
+pymssql==2.4.0

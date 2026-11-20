@@ -1,0 +1,48 @@
+# t 1795191736.008153539
+cpu app1 dhakir-maker 3760896
+cpu app1 dhakir-api 1462945353
+cpu app2 compose-worker-12 34773043
+cpu app2 compose-worker-22 17697565
+cpu app2 compose-worker-11 24167806
+cpu app2 compose-worker-27 19436653
+cpu app2 compose-worker-29 27003197
+cpu app2 compose-worker-15 25795360
+cpu app2 compose-worker-4 19394517
+cpu app2 compose-worker-25 23206457
+cpu app2 compose-worker-30 21225454
+cpu app2 compose-worker-23 22873507
+cpu app2 compose-worker-9 20777124
+cpu app2 compose-worker-26 15990799
+cpu app2 compose-worker-32 20593005
+cpu app2 compose-worker-6 24253793
+cpu app2 compose-worker-2 25918951
+cpu app2 compose-worker-21 22618647
+cpu app2 compose-worker-5 20404370
+cpu app2 compose-worker-31 19125747
+cpu app2 compose-worker-24 18953467
+cpu app2 compose-worker-13 17310322
+cpu app2 compose-worker-28 17130001
+cpu app2 compose-worker-18 20757911
+cpu app2 compose-worker-1 21448205
+cpu app2 compose-worker-7 25339027
+cpu app2 compose-worker-3 17051486
+cpu app2 compose-worker-10 16682998
+cpu app2 compose-worker-14 18518156
+cpu app2 compose-worker-19 13705208
+cpu app2 compose-worker-8 20002462
+cpu app2 compose-worker-20 18485102
+cpu app2 compose-worker-17 26929770
+cpu app2 compose-worker-16 19757225
+cpu infra dhakir-redis 461520369
+cpu infra dhakir-influx 94198354
+cpu infra dhakir-kafka 6691756438
+cpu infra dhakir-minio 10862596178
+cpu db dhakir-neo4j 12738314433
+neo4j_bytes /data/databases/neo4j 10071879883
+neo4j_bytes /data/transactions/neo4j 3043088739
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 2.083095e+06
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 2.083095e+06
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 16116
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 2.886761e+06
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 798376

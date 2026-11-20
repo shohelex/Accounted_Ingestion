@@ -1,0 +1,48 @@
+# t 1795191921.925696424
+cpu app1 dhakir-maker 8948219
+cpu app1 dhakir-api 1530110848
+cpu app2 compose-worker-12 39239082
+cpu app2 compose-worker-22 21482057
+cpu app2 compose-worker-11 27620642
+cpu app2 compose-worker-27 22860591
+cpu app2 compose-worker-29 30403383
+cpu app2 compose-worker-15 29145185
+cpu app2 compose-worker-4 22744346
+cpu app2 compose-worker-25 26603041
+cpu app2 compose-worker-30 24694638
+cpu app2 compose-worker-23 26200605
+cpu app2 compose-worker-9 24260801
+cpu app2 compose-worker-26 19294312
+cpu app2 compose-worker-32 23988779
+cpu app2 compose-worker-6 27717676
+cpu app2 compose-worker-2 29317179
+cpu app2 compose-worker-21 26452045
+cpu app2 compose-worker-5 23742427
+cpu app2 compose-worker-31 22557221
+cpu app2 compose-worker-24 22323235
+cpu app2 compose-worker-13 20685710
+cpu app2 compose-worker-28 20364889
+cpu app2 compose-worker-18 24327939
+cpu app2 compose-worker-1 24896655
+cpu app2 compose-worker-7 28724707
+cpu app2 compose-worker-3 20768932
+cpu app2 compose-worker-10 20199376
+cpu app2 compose-worker-14 21948801
+cpu app2 compose-worker-19 17068629
+cpu app2 compose-worker-8 23974288
+cpu app2 compose-worker-20 21855344
+cpu app2 compose-worker-17 30941280
+cpu app2 compose-worker-16 23011183
+cpu infra dhakir-redis 463482951
+cpu infra dhakir-influx 94371029
+cpu infra dhakir-kafka 6742570896
+cpu infra dhakir-minio 10920809905
+cpu db dhakir-neo4j 12743073433
+neo4j_bytes /data/databases/neo4j 10071879883
+neo4j_bytes /data/transactions/neo4j 3043088739
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 2.091967e+06
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 2.091967e+06
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 16118
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 2.898407e+06
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 809266

@@ -1,0 +1,48 @@
+# t 1795191463.451618651
+cpu app1 dhakir-maker 591757
+cpu app1 dhakir-api 135670521
+cpu app2 compose-worker-12 11264133
+cpu app2 compose-worker-22 11342256
+cpu app2 compose-worker-11 11459840
+cpu app2 compose-worker-27 11279377
+cpu app2 compose-worker-29 11145813
+cpu app2 compose-worker-15 11076706
+cpu app2 compose-worker-4 10998170
+cpu app2 compose-worker-25 11410168
+cpu app2 compose-worker-30 11300224
+cpu app2 compose-worker-23 11312617
+cpu app2 compose-worker-9 11243757
+cpu app2 compose-worker-26 10909170
+cpu app2 compose-worker-32 10920169
+cpu app2 compose-worker-6 10900056
+cpu app2 compose-worker-2 10842105
+cpu app2 compose-worker-21 10775710
+cpu app2 compose-worker-5 10703331
+cpu app2 compose-worker-31 10645353
+cpu app2 compose-worker-24 10580090
+cpu app2 compose-worker-13 10692433
+cpu app2 compose-worker-28 10493510
+cpu app2 compose-worker-18 10704370
+cpu app2 compose-worker-1 10248739
+cpu app2 compose-worker-7 10544284
+cpu app2 compose-worker-3 10142530
+cpu app2 compose-worker-10 10149158
+cpu app2 compose-worker-14 10549416
+cpu app2 compose-worker-19 10204251
+cpu app2 compose-worker-8 9972585
+cpu app2 compose-worker-20 10077078
+cpu app2 compose-worker-17 9878920
+cpu app2 compose-worker-16 9766502
+cpu infra dhakir-redis 458991036
+cpu infra dhakir-influx 93974283
+cpu infra dhakir-kafka 6610792091
+cpu infra dhakir-minio 10284560125
+cpu db dhakir-neo4j 12676146956
+neo4j_bytes /data/databases/neo4j 10071789316
+neo4j_bytes /data/transactions/neo4j 2774630225
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 1.885511e+06
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 1.885511e+06
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 15704
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 2.691251e+06
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 784959

@@ -1,0 +1,57 @@
+# Baseline: immudb, and the sink that feeds it from the pipeline's Kafka topic (immudb_sink.py).
+# Start deploy/docker-compose.yml with ACCT_MODE=false WRITERS=0 (the sinks replace the writers), then:
+#   SINKS=1 docker compose -f bench/baselines/docker-compose.immudb.yml up -d --build
+# It joins the pipeline's network (PIPELINE_NETWORK, default deploy_default); immudb listens on 127.0.0.1:3322.
+services:
+  immudb:
+    image: codenotary/immudb:1.9.5
+    container_name: immudb
+    restart: unless-stopped
+    environment:
+      IMMUDB_ADDRESS: "0.0.0.0"
+      IMMUDB_AUTH: "true"
+      IMMUDB_ADMIN_PASSWORD: "${IMMUDB_PASSWORD:-immudb}"
+      # Everything else, including commit and sync behaviour, at immudb's defaults.
+    ports:
+      - "127.0.0.1:3322:3322"
+    volumes:
+      - immudb_data:/var/lib/immudb
+    healthcheck:
+      test: ["CMD", "/usr/local/bin/immuadmin", "status"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+
+  sink:
+    build:
+      context: ../..
+      dockerfile_inline: |
+        FROM python:3.12-slim
+        WORKDIR /app
+        RUN pip install --no-cache-dir aiokafka==0.12.0 pydantic==2.12.2 immudb-py==1.5.0
+        COPY schemas.py /app/
+        COPY crypto /app/crypto
+        COPY bench/baselines /app/bench/baselines
+    image: baseline-immudb-sink:latest
+    restart: unless-stopped
+    command: ["python", "/app/bench/baselines/immudb_sink.py"]
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: '["kafka:9092"]'
+      KAFKA_TOPIC: "provenance-events"
+      KAFKA_SESSION_TIMEOUT_MS: "${KAFKA_SESSION_TIMEOUT_MS:-45000}"
+      IMMUDB_ADDR: "immudb:3322"
+      IMMUDB_PASSWORD: "${IMMUDB_PASSWORD:-immudb}"
+      SINK_BATCH: "${SINK_BATCH:-32}"
+    depends_on:
+      immudb: {condition: service_healthy}
+    deploy:
+      replicas: ${SINKS:-1}
+
+networks:
+  default:
+    name: ${PIPELINE_NETWORK:-deploy_default}
+    external: true
+
+volumes:
+  immudb_data:

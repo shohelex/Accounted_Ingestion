@@ -1,0 +1,14 @@
+{
+ "acknowledged": 2460621,
+ "present": 2460621,
+ "missing": 0,
+ "missing_sample": [],
+ "lookup_s": 74.97,
+ "sampled": 500,
+ "proofs_verified": 500,
+ "proofs_failed": 0,
+ "proof_ms_mean": 1.58,
+ "sample_written_more_than_once": 0,
+ "database_tx_id": 95568,
+ "coverage_scan_s": 20.99
+}

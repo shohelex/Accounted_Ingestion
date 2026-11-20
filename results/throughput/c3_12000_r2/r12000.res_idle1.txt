@@ -1,0 +1,48 @@
+# t 1795182280.552642837
+cpu app1 dhakir-maker 12669471
+cpu app1 dhakir-api 2693402055
+cpu app2 compose-worker-15 76869516
+cpu app2 compose-worker-28 114313795
+cpu app2 compose-worker-27 57606251
+cpu app2 compose-worker-17 100933580
+cpu app2 compose-worker-20 95960091
+cpu app2 compose-worker-1 38765457
+cpu app2 compose-worker-11 77889916
+cpu app2 compose-worker-4 95680971
+cpu app2 compose-worker-6 78442877
+cpu app2 compose-worker-24 128537117
+cpu app2 compose-worker-23 58460210
+cpu app2 compose-worker-25 112086636
+cpu app2 compose-worker-14 95693316
+cpu app2 compose-worker-18 150081922
+cpu app2 compose-worker-19 77889057
+cpu app2 compose-worker-3 95516462
+cpu app2 compose-worker-10 144803326
+cpu app2 compose-worker-13 140889471
+cpu app2 compose-worker-7 57371979
+cpu app2 compose-worker-31 127645557
+cpu app2 compose-worker-32 96083187
+cpu app2 compose-worker-22 144361989
+cpu app2 compose-worker-9 143623621
+cpu app2 compose-worker-5 77433301
+cpu app2 compose-worker-2 57023685
+cpu app2 compose-worker-16 77978550
+cpu app2 compose-worker-30 94446035
+cpu app2 compose-worker-29 56703791
+cpu app2 compose-worker-21 75077293
+cpu app2 compose-worker-12 17911801
+cpu app2 compose-worker-26 110385047
+cpu app2 compose-worker-8 111112364
+cpu infra dhakir-redis 99052012
+cpu infra dhakir-influx 6380657
+cpu infra dhakir-kafka 3175761157
+cpu infra dhakir-minio 5771714955
+cpu db dhakir-neo4j 8885641547
+neo4j_bytes /data/databases/neo4j 10066170515
+neo4j_bytes /data/transactions/neo4j 4567769763
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 776649
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 776649
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 10838
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 1.608105e+06
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 515084

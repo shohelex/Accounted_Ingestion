@@ -1,0 +1,46 @@
+{
+ "sweep": "baseline_immudb.sh",
+ "commit": "3e016e8fc373101f157abe6dae1628f5630ad27c",
+ "written": "2026-11-20T14:50:59+0000",
+ "brokers_declared": {
+  "n_brokers": 1,
+  "hosts": [
+   "10.10.1.2"
+  ],
+  "bootstrap": [
+   "10.10.1.2:9092"
+  ],
+  "replication_factor": 1,
+  "min_insync_replicas": 1
+ },
+ "brokers_live": {
+  "queried": true,
+  "quorum_voters": [
+   1
+  ]
+ },
+ "parameters": {
+  "PARTITIONS": "32",
+  "WORKERS": "12",
+  "CONSUMERS": "4",
+  "CONSUMERS2": "0",
+  "EMITPROCS": "6",
+  "RATE": "600",
+  "RATES": "8000 10000 12000 14000",
+  "TENANTS": "128",
+  "TLIST": "1 4 16 64",
+  "REPS": "1",
+  "B": "32",
+  "K": "100",
+  "G": "32",
+  "CONC": "256",
+  "LAGCAP": "10000",
+  "DUR": "210",
+  "WARM": "60",
+  "MODE": "c3",
+  "SINKS": "0",
+  "SINKS2": "32"
+ },
+ "consistent": true,
+ "problems": []
+}

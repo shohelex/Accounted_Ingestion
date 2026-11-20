@@ -1,0 +1,29 @@
+{
+ "acknowledged": 525600,
+ "covered": 0,
+ "never_covered": 525600,
+ "covered_before_ack": 0,
+ "exposure_s": {
+  "p50": null,
+  "p90": null,
+  "p99": null,
+  "max": null,
+  "mean": null
+ },
+ "exposure_signed_s": {
+  "min": null,
+  "p50": null,
+  "max": null
+ },
+ "uncovered_events": {
+  "max": 525600,
+  "max_at_s": 210.3,
+  "mean": 263263.3
+ },
+ "per_tenant": {},
+ "system": "dhakir",
+ "anchor_mode": null,
+ "pairing": "count per tenant (v1 anchors carry no position)",
+ "ack_basis": "load generator done time (receipts file)",
+ "cover_basis": "anchor record ts"
+}

@@ -1,0 +1,48 @@
+# t 1795190860.677123906
+cpu app1 dhakir-maker 7440826
+cpu app1 dhakir-api 2763115181
+cpu app2 compose-worker-20 49109922
+cpu app2 compose-worker-11 43926331
+cpu app2 compose-worker-12 29055869
+cpu app2 compose-worker-18 33828125
+cpu app2 compose-worker-14 24437413
+cpu app2 compose-worker-6 48123674
+cpu app2 compose-worker-17 37792652
+cpu app2 compose-worker-25 52996106
+cpu app2 compose-worker-22 54445902
+cpu app2 compose-worker-27 33943263
+cpu app2 compose-worker-1 33590515
+cpu app2 compose-worker-23 48324240
+cpu app2 compose-worker-19 28974966
+cpu app2 compose-worker-8 19564598
+cpu app2 compose-worker-3 28863594
+cpu app2 compose-worker-32 15858131
+cpu app2 compose-worker-16 24329234
+cpu app2 compose-worker-13 47848316
+cpu app2 compose-worker-5 32105494
+cpu app2 compose-worker-7 28368184
+cpu app2 compose-worker-9 28094152
+cpu app2 compose-worker-2 24350336
+cpu app2 compose-worker-31 33024811
+cpu app2 compose-worker-26 37955636
+cpu app2 compose-worker-28 32458422
+cpu app2 compose-worker-29 37551468
+cpu app2 compose-worker-24 33163910
+cpu app2 compose-worker-10 27464351
+cpu app2 compose-worker-21 27984681
+cpu app2 compose-worker-15 23566136
+cpu app2 compose-worker-4 23234776
+cpu app2 compose-worker-30 38546155
+cpu infra dhakir-redis 452738749
+cpu infra dhakir-influx 93360482
+cpu infra dhakir-kafka 6420374101
+cpu infra dhakir-minio 10009496026
+cpu db dhakir-neo4j 12617206586
+neo4j_bytes /data/databases/neo4j 10022001246
+neo4j_bytes /data/transactions/neo4j 3029534877
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 1.845846e+06
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 1.845846e+06
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 15603
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 2.645981e+06
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 757222

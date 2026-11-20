@@ -1,0 +1,1 @@
+{"mode": "graph", "rate": 3500, "partitions": 32, "partition_cap_q": 1000, "total_cap": 10000, "q_window_s": 120}

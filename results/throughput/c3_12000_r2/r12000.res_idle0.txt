@@ -1,0 +1,48 @@
+# t 1795182094.539907785
+cpu app1 dhakir-maker 8643212
+cpu app1 dhakir-api 2616487806
+cpu app2 compose-worker-15 73357222
+cpu app2 compose-worker-28 109642976
+cpu app2 compose-worker-27 54056360
+cpu app2 compose-worker-17 97313814
+cpu app2 compose-worker-20 92367506
+cpu app2 compose-worker-1 35184858
+cpu app2 compose-worker-11 74345676
+cpu app2 compose-worker-4 92124276
+cpu app2 compose-worker-6 74841495
+cpu app2 compose-worker-24 124791466
+cpu app2 compose-worker-23 55010578
+cpu app2 compose-worker-25 108610320
+cpu app2 compose-worker-14 91591914
+cpu app2 compose-worker-18 146595260
+cpu app2 compose-worker-19 74286853
+cpu app2 compose-worker-3 91985234
+cpu app2 compose-worker-10 141244453
+cpu app2 compose-worker-13 137270127
+cpu app2 compose-worker-7 53760659
+cpu app2 compose-worker-31 124176833
+cpu app2 compose-worker-32 92369622
+cpu app2 compose-worker-22 140850672
+cpu app2 compose-worker-9 140090349
+cpu app2 compose-worker-5 73650432
+cpu app2 compose-worker-2 53552143
+cpu app2 compose-worker-16 74050323
+cpu app2 compose-worker-30 91038357
+cpu app2 compose-worker-29 53179071
+cpu app2 compose-worker-21 71608310
+cpu app2 compose-worker-12 14469642
+cpu app2 compose-worker-26 106727785
+cpu app2 compose-worker-8 107281370
+cpu infra dhakir-redis 97097774
+cpu infra dhakir-influx 6296672
+cpu infra dhakir-kafka 3125546988
+cpu infra dhakir-minio 5717656731
+cpu db dhakir-neo4j 8880967372
+neo4j_bytes /data/databases/neo4j 10066170515
+neo4j_bytes /data/transactions/neo4j 4567769763
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 767897
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 767897
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 10836
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 1.596063e+06
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 503798

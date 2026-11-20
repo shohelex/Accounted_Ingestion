@@ -1,0 +1,11 @@
+fastapi==0.119.0
+uvicorn[standard]==0.37.0
+pydantic==2.12.2
+pydantic-settings==2.11.0
+neo4j==6.0.2
+redis[hiredis]==6.4.0
+kafka-python==2.2.15
+aiokafka==0.12.0
+cryptography==50.0.2
+httpx==0.28.1
+boto3==1.40.53

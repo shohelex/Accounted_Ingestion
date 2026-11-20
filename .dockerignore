@@ -1,0 +1,11 @@
+.git
+**/__pycache__
+*.pyc
+deploy/.env
+eval/
+.verify/
+anchor_store/
+retry_queue/
+tla/tools/
+tla/results/
+tla/states/

@@ -1,0 +1,48 @@
+# t 1795185129.443311460
+cpu app1 dhakir-maker 12802485
+cpu app1 dhakir-api 2752294656
+cpu app2 compose-worker-11 78089690
+cpu app2 compose-worker-7 88934007
+cpu app2 compose-worker-14 89473314
+cpu app2 compose-worker-8 120499495
+cpu app2 compose-worker-32 88533672
+cpu app2 compose-worker-16 88963801
+cpu app2 compose-worker-25 135113177
+cpu app2 compose-worker-26 88922041
+cpu app2 compose-worker-22 55084658
+cpu app2 compose-worker-23 106056048
+cpu app2 compose-worker-20 72684456
+cpu app2 compose-worker-2 19023634
+cpu app2 compose-worker-3 55164449
+cpu app2 compose-worker-31 150161502
+cpu app2 compose-worker-1 71647738
+cpu app2 compose-worker-30 72007808
+cpu app2 compose-worker-5 134023214
+cpu app2 compose-worker-17 54778466
+cpu app2 compose-worker-12 104053507
+cpu app2 compose-worker-13 102878868
+cpu app2 compose-worker-28 104103217
+cpu app2 compose-worker-27 88033460
+cpu app2 compose-worker-4 72543986
+cpu app2 compose-worker-21 135245074
+cpu app2 compose-worker-6 53621204
+cpu app2 compose-worker-15 122262283
+cpu app2 compose-worker-19 71594194
+cpu app2 compose-worker-9 53915355
+cpu app2 compose-worker-29 36827490
+cpu app2 compose-worker-24 87727986
+cpu app2 compose-worker-18 71855142
+cpu app2 compose-worker-10 134722075
+cpu infra dhakir-redis 248894267
+cpu infra dhakir-influx 44580795
+cpu infra dhakir-kafka 4171253583
+cpu infra dhakir-minio 7335540452
+cpu db dhakir-neo4j 11487264679
+neo4j_bytes /data/databases/neo4j 10066122780
+neo4j_bytes /data/transactions/neo4j 6509316894
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 981679
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 981679
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 13575
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 1.935883e+06
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 651260

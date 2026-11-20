@@ -1,0 +1,48 @@
+# t 1795189714.644400495
+cpu app1 dhakir-maker 591595
+cpu app1 dhakir-api 133443834
+cpu app2 compose-worker-27 11704460
+cpu app2 compose-worker-31 11466616
+cpu app2 compose-worker-1 11485438
+cpu app2 compose-worker-10 11607660
+cpu app2 compose-worker-17 11492079
+cpu app2 compose-worker-13 11255528
+cpu app2 compose-worker-5 11244487
+cpu app2 compose-worker-7 11355676
+cpu app2 compose-worker-25 11384333
+cpu app2 compose-worker-14 11200555
+cpu app2 compose-worker-30 11201972
+cpu app2 compose-worker-2 10969180
+cpu app2 compose-worker-24 11154786
+cpu app2 compose-worker-20 10873297
+cpu app2 compose-worker-15 10798969
+cpu app2 compose-worker-32 10691837
+cpu app2 compose-worker-29 10901538
+cpu app2 compose-worker-28 10703608
+cpu app2 compose-worker-21 10858885
+cpu app2 compose-worker-23 10727745
+cpu app2 compose-worker-18 10644148
+cpu app2 compose-worker-3 10736302
+cpu app2 compose-worker-12 10609520
+cpu app2 compose-worker-19 10634677
+cpu app2 compose-worker-22 10331794
+cpu app2 compose-worker-26 10445948
+cpu app2 compose-worker-8 10177198
+cpu app2 compose-worker-11 10231319
+cpu app2 compose-worker-6 10186657
+cpu app2 compose-worker-9 9771060
+cpu app2 compose-worker-16 9952247
+cpu app2 compose-worker-4 9895885
+cpu infra dhakir-redis 442385074
+cpu infra dhakir-influx 92345116
+cpu infra dhakir-kafka 6067337100
+cpu infra dhakir-minio 8296799324
+cpu db dhakir-neo4j 12329596307
+neo4j_bytes /data/databases/neo4j 10046919491
+neo4j_bytes /data/transactions/neo4j 4105786366
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 1.04798e+06
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 1.04798e+06
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 13742
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 2.002191e+06
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 689480

@@ -1,0 +1,48 @@
+# t 1795190201.304374605
+cpu app1 dhakir-maker 9970593
+cpu app1 dhakir-api 2568329252
+cpu app2 compose-worker-27 53956874
+cpu app2 compose-worker-31 44489527
+cpu app2 compose-worker-1 28838614
+cpu app2 compose-worker-10 37644510
+cpu app2 compose-worker-17 28999764
+cpu app2 compose-worker-13 22667846
+cpu app2 compose-worker-5 31448197
+cpu app2 compose-worker-7 28867769
+cpu app2 compose-worker-25 28219144
+cpu app2 compose-worker-14 31062956
+cpu app2 compose-worker-30 31233890
+cpu app2 compose-worker-2 40832562
+cpu app2 compose-worker-24 24900307
+cpu app2 compose-worker-20 33930867
+cpu app2 compose-worker-15 33956130
+cpu app2 compose-worker-32 33242982
+cpu app2 compose-worker-29 19507033
+cpu app2 compose-worker-28 27420585
+cpu app2 compose-worker-21 30573162
+cpu app2 compose-worker-23 41569860
+cpu app2 compose-worker-18 40858351
+cpu app2 compose-worker-3 30803611
+cpu app2 compose-worker-12 24346372
+cpu app2 compose-worker-19 27889316
+cpu app2 compose-worker-22 24871287
+cpu app2 compose-worker-26 24454696
+cpu app2 compose-worker-8 27555057
+cpu app2 compose-worker-11 24261542
+cpu app2 compose-worker-6 39956880
+cpu app2 compose-worker-9 29211254
+cpu app2 compose-worker-16 36558705
+cpu app2 compose-worker-4 29680222
+cpu infra dhakir-redis 446664056
+cpu infra dhakir-influx 92724553
+cpu infra dhakir-kafka 6201658123
+cpu infra dhakir-minio 9084389028
+cpu db dhakir-neo4j 12432872027
+neo4j_bytes /data/databases/neo4j 10047093180
+neo4j_bytes /data/transactions/neo4j 4642833330
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 1.439548e+06
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 1.439548e+06
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 14499
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 2.301652e+06
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 720447

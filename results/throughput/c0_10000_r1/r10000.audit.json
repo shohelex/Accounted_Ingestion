@@ -1,0 +1,1 @@
+{"acct_mode":false,"bucket":"dhakir-anchors","prefix":"r1795184093476/anchors","audit_mode":"sampled","census":{"families":{"anchors":{"objects":2176,"bytes":1038499,"mean_bytes":477.3}},"wall_s":0.321,"cpu_s":0.149},"tenants":128}

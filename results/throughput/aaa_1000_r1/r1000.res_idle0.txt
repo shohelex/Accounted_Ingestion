@@ -1,0 +1,48 @@
+# t 1795190015.584328604
+cpu app1 dhakir-maker 5476870
+cpu app1 dhakir-api 2498246983
+cpu app2 compose-worker-27 49387539
+cpu app2 compose-worker-31 40985684
+cpu app2 compose-worker-1 25189788
+cpu app2 compose-worker-10 34061787
+cpu app2 compose-worker-17 25496967
+cpu app2 compose-worker-13 19181402
+cpu app2 compose-worker-5 27876014
+cpu app2 compose-worker-7 25343348
+cpu app2 compose-worker-25 24667984
+cpu app2 compose-worker-14 27607731
+cpu app2 compose-worker-30 27710930
+cpu app2 compose-worker-2 37279851
+cpu app2 compose-worker-24 21425665
+cpu app2 compose-worker-20 30412385
+cpu app2 compose-worker-15 30398333
+cpu app2 compose-worker-32 29709026
+cpu app2 compose-worker-29 15970334
+cpu app2 compose-worker-28 24022522
+cpu app2 compose-worker-21 26955114
+cpu app2 compose-worker-23 38000034
+cpu app2 compose-worker-18 37226207
+cpu app2 compose-worker-3 27361899
+cpu app2 compose-worker-12 20937415
+cpu app2 compose-worker-19 24421957
+cpu app2 compose-worker-22 21364856
+cpu app2 compose-worker-26 20984034
+cpu app2 compose-worker-8 24048233
+cpu app2 compose-worker-11 20594180
+cpu app2 compose-worker-6 36603086
+cpu app2 compose-worker-9 25650413
+cpu app2 compose-worker-16 32934191
+cpu app2 compose-worker-4 26365862
+cpu infra dhakir-redis 444680618
+cpu infra dhakir-influx 92575139
+cpu infra dhakir-kafka 6152278870
+cpu infra dhakir-minio 9022956301
+cpu db dhakir-neo4j 12428139733
+neo4j_bytes /data/databases/neo4j 10047093180
+neo4j_bytes /data/transactions/neo4j 4642833330
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 1.430752e+06
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 1.430752e+06
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 14497
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 2.28981e+06
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 709361

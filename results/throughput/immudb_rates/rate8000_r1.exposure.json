@@ -1,0 +1,26 @@
+{
+ "acknowledged": 16802,
+ "digests_ok": 9,
+ "digests_failed": 0,
+ "covered_at_end": 16802,
+ "never_covered": 0,
+ "exposure_s": {
+  "p50": 15.005,
+  "p90": 27.019,
+  "p99": 29.711,
+  "max": 30.011,
+  "mean": 15.013
+ },
+ "uncovered_events": {
+  "max": 2401,
+  "max_at_s": 59.8,
+  "mean": 1195.1
+ },
+ "digest_gap_s": {
+  "median": 30.0,
+  "max": 30.01
+ },
+ "first_digest_s": 0.06,
+ "coverage_basis": "ledger blocks (exact)",
+ "ack_basis": "admitted_by_completion, spread per second"
+}
