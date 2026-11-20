@@ -1,7 +1,7 @@
 {
   "title": "Accounted Ingestion: code and data",
   "upload_type": "software",
-  "description": "Source code and data for the paper \"Accounted Ingestion: Third-Party Proof of Lost Provenance Events in Managed Clouds\". It contains the ingest pipeline (API, writers, statement maker, replay auditor and offline judge), the benchmarks and the two ledger baselines (immudb, SQL Server ledger), the TLA+ models and configurations, and the raw output of the throughput runs. The code is under the MIT License (LICENSE); the data in results/ is under CC BY 4.0 (LICENSE-DATA).",
+  "description": "Source code and data for the paper \"Verifiable Ingestion of Acknowledged Provenance Events on Managed Cloud Services\". It contains the ingest pipeline (API, writers, statement maker, replay auditor and offline judge), the benchmarks and the two ledger baselines (immudb, SQL Server ledger), the TLA+ models and configurations, and the raw output of the throughput runs. The code is under the MIT License (LICENSE); the data in results/ is under CC BY 4.0 (LICENSE-DATA).",
   "creators": [
     {
       "name": "Khan, Md Shohel",

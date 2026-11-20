@@ -1,7 +1,7 @@
 # Accounted Ingestion
 
-Source code and data for the paper "Accounted Ingestion: Third-Party Proof of Lost Provenance Events in Managed
-Clouds" by Md Shohel Khan, Rubaiyat Sha Fardin Siam and Muhammad Abdullah Adnan.
+Source code and data for the paper "Verifiable Ingestion of Acknowledged Provenance Events on Managed Cloud Services"
+by Md Shohel Khan, Rubaiyat Sha Fardin Siam and Muhammad Abdullah Adnan.
 
 The API acknowledges an event when Kafka has it and returns a signed receipt with the broker
 position. Writers append the event to the tenant's log (MMR), anchor the log in write-once storage,
