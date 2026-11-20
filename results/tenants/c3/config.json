@@ -1,0 +1,43 @@
+{
+ "sweep": "tenant_sweep.sh",
+ "commit": "081223e2b4f2e023aa08d33fc05bf1fcb6c8a741-dirty",
+ "written": "2026-11-07T06:36:55+0000",
+ "brokers_declared": {
+  "n_brokers": 1,
+  "hosts": [
+   "192.168.10.163"
+  ],
+  "bootstrap": [
+   "192.168.10.163:9092"
+  ],
+  "replication_factor": 1,
+  "min_insync_replicas": 1
+ },
+ "brokers_live": {
+  "queried": true,
+  "quorum_voters": [
+   1
+  ]
+ },
+ "parameters": {
+  "PARTITIONS": "32",
+  "WORKERS": "12",
+  "CONSUMERS": "16",
+  "CONSUMERS2": "16",
+  "EMITPROCS": "14",
+  "RATE": "310",
+  "TLIST": "8 64 512",
+  "REPS": "2",
+  "B": "32",
+  "K": "100",
+  "G": "32",
+  "CONC": "256",
+  "LAGCAP": "10000",
+  "DUR": "210",
+  "WARM": "60",
+  "MODE": "c3",
+  "AUDIT_MODE": "sampled"
+ },
+ "consistent": true,
+ "problems": []
+}

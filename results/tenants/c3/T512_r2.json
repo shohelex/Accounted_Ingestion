@@ -1,0 +1,5212 @@
+{
+  "config": {
+    "rate_target_eps": 310,
+    "duration_s": 210.0,
+    "warmup_s": 60.0,
+    "workers": 32,
+    "api_nodes": 1,
+    "tenants": 512,
+    "skew": false,
+    "max_inflight": 512,
+    "partitions": 32,
+    "emit_procs": 14,
+    "inflight_per_process": 36,
+    "request_timeout_s": 30.0,
+    "overflow": "queue",
+    "schedule_s_actual": 210.0,
+    "extend_until": null,
+    "graph": true,
+    "label": "T512_r2",
+    "epoch_start": 1794038862.464
+  },
+  "offered": {
+    "requests_scheduled": 65114,
+    "achieved_offer_rate_eps": 309.6,
+    "wall_s": 210.3
+  },
+  "capacity": {
+    "steady_delivered_eps": 273.29,
+    "implied_capacity_eps": 306.58,
+    "note": "DEPRECATED 2026-09-09: steady_delivered_eps counts warm-up backlog draining through the window as throughput (measured 1.26-1.32x inflation on every 2026-08 run) and CAN exceed the offered rate. Quote reconciled.delivered_window_eps instead. implied_capacity_eps = offered - lag slope; do not quote it either."
+  },
+  "reconciled": {
+    "offered_window": 46514,
+    "accepted_window": 45516,
+    "accepted_window_unreconcilable": 0,
+    "rejected_window": 998,
+    "committed_window_by_emit_end": 39876,
+    "committed_window_after_drain": 45516,
+    "pending_at_emit_end": 5640,
+    "lost_window": 0,
+    "loss_fraction_reconciled": 0.0,
+    "delivered_window_eps": 265.84,
+    "eventually_delivered_window_eps": 303.44,
+    "warmup_accepted": 18550,
+    "warmup_backlog_at_window_start": 1171,
+    "warmup_drained_inside_window": 1171,
+    "warmup_lost_after_drain": 0,
+    "note": "delivered_window_eps: events offered inside the steady window and present in the graph by end of emission, over the window. Cannot include warm-up backlog; cannot exceed the offered rate. warmup_drained_inside_window is the contamination that the legacy steady_delivered_eps counted as throughput. lost_window is permanent (absent after drain); pending_at_emit_end arrived late but arrived."
+  },
+  "wallclock": {
+    "wall_s": 210.3,
+    "schedule_s": 210.0,
+    "emitter_behind_schedule_x": 1.0,
+    "accepted_eps": 304.64,
+    "commit_eps": 272.74,
+    "drain_eps": 49.13,
+    "note": "accepted_eps = accepted_total / wall. commit_eps = activities added between the warm-up sample (wall t = warmup_s) and end of emission, over that wall span. drain_eps = pending at emit end over the seconds the consumer took to clear it with no new load. If emitter_behind_schedule_x is far above 1, the offered rate was never reached and reconciled.delivered_window_eps is not a sustained rate: quote these."
+  },
+  "steady_state": {
+    "requests": 46514,
+    "scheduled_rate_eps": 310.1,
+    "accepted_rate_eps": 303.4
+  },
+  "response_codes": {
+    "200": 64066,
+    "503": 1048
+  },
+  "per_second": {
+    "accepted": [
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      309,
+      307,
+      309,
+      305,
+      309,
+      309,
+      306,
+      307,
+      305,
+      300,
+      300,
+      304,
+      306,
+      304,
+      303,
+      304,
+      305,
+      303,
+      303,
+      302,
+      300,
+      303,
+      297,
+      300,
+      307,
+      303,
+      298,
+      307,
+      309,
+      305,
+      307,
+      307,
+      304,
+      302,
+      305,
+      305,
+      302,
+      306,
+      310,
+      309,
+      310,
+      310,
+      310,
+      309,
+      310,
+      308,
+      308,
+      309,
+      310,
+      310,
+      309,
+      306,
+      310,
+      309,
+      310,
+      308,
+      306,
+      301,
+      307,
+      305,
+      300,
+      305,
+      305,
+      301,
+      302,
+      305,
+      302,
+      302,
+      297,
+      295,
+      296,
+      297,
+      300,
+      294,
+      301,
+      302,
+      303,
+      304,
+      307,
+      301,
+      307,
+      302,
+      303,
+      304,
+      302,
+      307,
+      307,
+      305,
+      309,
+      308,
+      309,
+      308,
+      308,
+      307,
+      306,
+      304,
+      305,
+      306,
+      306,
+      305,
+      304,
+      303,
+      303,
+      301,
+      303,
+      306,
+      303,
+      297,
+      306,
+      303,
+      301,
+      302,
+      296,
+      304,
+      295,
+      302,
+      286,
+      294,
+      298,
+      298,
+      306,
+      304,
+      302,
+      307,
+      306,
+      308,
+      301,
+      309,
+      300,
+      298,
+      301,
+      300,
+      296,
+      298,
+      303,
+      299,
+      297,
+      292,
+      303,
+      305,
+      304,
+      296,
+      304,
+      302,
+      303,
+      302,
+      300,
+      298,
+      297,
+      299,
+      299,
+      305,
+      301,
+      300,
+      302,
+      302,
+      306,
+      301,
+      304,
+      305,
+      306,
+      309,
+      13
+    ],
+    "refused": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      3,
+      1,
+      5,
+      1,
+      1,
+      4,
+      3,
+      5,
+      10,
+      10,
+      6,
+      4,
+      6,
+      7,
+      6,
+      5,
+      7,
+      7,
+      8,
+      10,
+      7,
+      13,
+      10,
+      3,
+      7,
+      12,
+      3,
+      1,
+      5,
+      3,
+      3,
+      6,
+      8,
+      5,
+      5,
+      8,
+      4,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      2,
+      2,
+      1,
+      0,
+      0,
+      1,
+      4,
+      0,
+      1,
+      0,
+      2,
+      4,
+      9,
+      3,
+      5,
+      10,
+      5,
+      5,
+      9,
+      8,
+      5,
+      8,
+      8,
+      13,
+      15,
+      14,
+      13,
+      10,
+      16,
+      9,
+      8,
+      7,
+      6,
+      3,
+      9,
+      3,
+      8,
+      7,
+      6,
+      8,
+      3,
+      3,
+      5,
+      1,
+      2,
+      1,
+      2,
+      2,
+      3,
+      4,
+      6,
+      5,
+      4,
+      4,
+      5,
+      6,
+      7,
+      7,
+      9,
+      7,
+      4,
+      7,
+      13,
+      4,
+      7,
+      9,
+      8,
+      14,
+      6,
+      15,
+      8,
+      24,
+      16,
+      12,
+      12,
+      4,
+      6,
+      8,
+      3,
+      4,
+      2,
+      9,
+      1,
+      10,
+      12,
+      9,
+      10,
+      14,
+      12,
+      7,
+      11,
+      13,
+      18,
+      7,
+      5,
+      6,
+      14,
+      6,
+      8,
+      7,
+      8,
+      10,
+      12,
+      13,
+      11,
+      11,
+      5,
+      9,
+      10,
+      8,
+      8,
+      4,
+      9,
+      6,
+      5,
+      4,
+      1,
+      1
+    ]
+  },
+  "attempts_per_second": {
+    "sent": [
+      310,
+      311,
+      309,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      311,
+      309,
+      310,
+      311,
+      309,
+      310,
+      310,
+      311,
+      309,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      311,
+      309,
+      310,
+      310,
+      311,
+      309,
+      311,
+      310,
+      309,
+      310,
+      310,
+      310,
+      310,
+      311,
+      310,
+      309,
+      310,
+      311,
+      309,
+      310,
+      310,
+      310,
+      310,
+      310,
+      311,
+      309,
+      311,
+      309,
+      310,
+      310,
+      310,
+      310,
+      311,
+      309,
+      310,
+      310,
+      311,
+      309,
+      310,
+      310,
+      310,
+      310,
+      310,
+      311,
+      310,
+      309,
+      310,
+      311,
+      309,
+      311,
+      309,
+      310,
+      311,
+      309,
+      311,
+      310,
+      309,
+      310,
+      310,
+      311,
+      309,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      311,
+      309,
+      310,
+      310,
+      310,
+      310,
+      310,
+      311,
+      309,
+      310,
+      311,
+      309,
+      311,
+      310,
+      309,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      311,
+      309,
+      310,
+      311,
+      309,
+      311,
+      309,
+      310,
+      310,
+      310,
+      310,
+      310,
+      311,
+      309,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      311,
+      310,
+      309,
+      311,
+      309,
+      310,
+      310,
+      310,
+      311,
+      309,
+      310,
+      310,
+      310,
+      310,
+      310,
+      311,
+      309,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      311,
+      309,
+      311,
+      309,
+      310,
+      234,
+      386,
+      310,
+      310,
+      310,
+      213,
+      407,
+      311,
+      301,
+      319,
+      309,
+      310,
+      311,
+      309,
+      311,
+      310,
+      310,
+      309,
+      310,
+      310,
+      311,
+      310,
+      309,
+      311,
+      309,
+      310,
+      311,
+      310,
+      309,
+      14
+    ],
+    "admitted": [
+      310,
+      311,
+      309,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      311,
+      309,
+      310,
+      311,
+      309,
+      310,
+      310,
+      311,
+      309,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      310,
+      311,
+      309,
+      310,
+      310,
+      311,
+      309,
+      311,
+      310,
+      309,
+      310,
+      310,
+      310,
+      310,
+      311,
+      309,
+      306,
+      309,
+      306,
+      308,
+      309,
+      306,
+      307,
+      305,
+      300,
+      301,
+      303,
+      307,
+      303,
+      303,
+      304,
+      305,
+      303,
+      304,
+      301,
+      300,
+      303,
+      298,
+      299,
+      307,
+      303,
+      298,
+      307,
+      309,
+      306,
+      307,
+      306,
+      304,
+      303,
+      304,
+      306,
+      301,
+      306,
+      311,
+      308,
+      311,
+      310,
+      309,
+      309,
+      310,
+      309,
+      307,
+      309,
+      310,
+      310,
+      309,
+      306,
+      310,
+      309,
+      310,
+      308,
+      306,
+      301,
+      307,
+      306,
+      299,
+      305,
+      305,
+      301,
+      302,
+      305,
+      303,
+      301,
+      297,
+      296,
+      295,
+      298,
+      300,
+      293,
+      301,
+      302,
+      303,
+      304,
+      307,
+      301,
+      307,
+      302,
+      303,
+      304,
+      303,
+      306,
+      308,
+      304,
+      309,
+      308,
+      309,
+      308,
+      308,
+      308,
+      305,
+      304,
+      305,
+      306,
+      306,
+      305,
+      304,
+      303,
+      303,
+      302,
+      303,
+      305,
+      304,
+      296,
+      306,
+      303,
+      301,
+      303,
+      295,
+      304,
+      295,
+      302,
+      286,
+      294,
+      299,
+      297,
+      306,
+      304,
+      302,
+      307,
+      306,
+      308,
+      301,
+      309,
+      301,
+      297,
+      302,
+      299,
+      296,
+      222,
+      379,
+      299,
+      297,
+      292,
+      206,
+      402,
+      305,
+      287,
+      313,
+      301,
+      303,
+      303,
+      299,
+      299,
+      297,
+      299,
+      298,
+      305,
+      301,
+      301,
+      302,
+      301,
+      306,
+      301,
+      304,
+      306,
+      306,
+      308,
+      13
+    ],
+    "refused": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      3,
+      1,
+      5,
+      1,
+      1,
+      4,
+      3,
+      5,
+      10,
+      10,
+      6,
+      4,
+      6,
+      7,
+      6,
+      5,
+      7,
+      7,
+      8,
+      10,
+      7,
+      13,
+      10,
+      3,
+      7,
+      12,
+      3,
+      1,
+      5,
+      3,
+      3,
+      6,
+      8,
+      5,
+      5,
+      8,
+      4,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      2,
+      2,
+      1,
+      0,
+      0,
+      1,
+      4,
+      0,
+      1,
+      0,
+      2,
+      4,
+      9,
+      3,
+      5,
+      10,
+      5,
+      5,
+      9,
+      8,
+      5,
+      8,
+      8,
+      13,
+      15,
+      14,
+      13,
+      10,
+      16,
+      9,
+      8,
+      7,
+      6,
+      3,
+      9,
+      3,
+      9,
+      6,
+      6,
+      8,
+      3,
+      3,
+      5,
+      1,
+      2,
+      1,
+      2,
+      2,
+      3,
+      4,
+      6,
+      5,
+      4,
+      4,
+      5,
+      6,
+      7,
+      7,
+      9,
+      7,
+      4,
+      7,
+      13,
+      4,
+      7,
+      9,
+      8,
+      14,
+      6,
+      15,
+      8,
+      24,
+      16,
+      12,
+      12,
+      4,
+      6,
+      8,
+      3,
+      4,
+      2,
+      9,
+      1,
+      10,
+      12,
+      9,
+      10,
+      14,
+      12,
+      7,
+      11,
+      13,
+      18,
+      7,
+      5,
+      6,
+      14,
+      6,
+      8,
+      7,
+      8,
+      10,
+      12,
+      13,
+      11,
+      11,
+      5,
+      9,
+      10,
+      8,
+      8,
+      5,
+      8,
+      6,
+      5,
+      4,
+      1,
+      1
+    ],
+    "timeout": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "error": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "overflow": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "admitted_by_completion": [
+      0,
+      534,
+      391,
+      309,
+      311,
+      310,
+      310,
+      311,
+      308,
+      312,
+      307,
+      312,
+      308,
+      312,
+      308,
+      312,
+      308,
+      312,
+      311,
+      308,
+      311,
+      309,
+      309,
+      312,
+      309,
+      311,
+      308,
+      313,
+      307,
+      312,
+      306,
+      315,
+      307,
+      312,
+      308,
+      311,
+      311,
+      311,
+      308,
+      311,
+      310,
+      310,
+      310,
+      310,
+      310,
+      311,
+      309,
+      309,
+      310,
+      306,
+      309,
+      306,
+      309,
+      309,
+      306,
+      307,
+      303,
+      301,
+      301,
+      304,
+      306,
+      303,
+      303,
+      304,
+      306,
+      303,
+      302,
+      301,
+      301,
+      304,
+      297,
+      300,
+      307,
+      303,
+      299,
+      306,
+      309,
+      303,
+      309,
+      307,
+      25,
+      466,
+      412,
+      243,
+      371,
+      296,
+      319,
+      307,
+      139,
+      452,
+      168,
+      214,
+      408,
+      34,
+      753,
+      303,
+      313,
+      313,
+      301,
+      307,
+      315,
+      310,
+      307,
+      304,
+      308,
+      300,
+      308,
+      306,
+      300,
+      308,
+      304,
+      304,
+      302,
+      306,
+      302,
+      303,
+      297,
+      292,
+      297,
+      298,
+      299,
+      196,
+      400,
+      147,
+      457,
+      305,
+      306,
+      302,
+      307,
+      303,
+      301,
+      306,
+      300,
+      307,
+      307,
+      307,
+      308,
+      305,
+      311,
+      309,
+      307,
+      306,
+      309,
+      299,
+      309,
+      303,
+      309,
+      303,
+      306,
+      301,
+      306,
+      298,
+      305,
+      304,
+      305,
+      296,
+      307,
+      302,
+      302,
+      303,
+      294,
+      299,
+      299,
+      304,
+      126,
+      455,
+      299,
+      296,
+      304,
+      298,
+      310,
+      306,
+      306,
+      309,
+      300,
+      311,
+      298,
+      65,
+      374,
+      461,
+      19,
+      0,
+      877,
+      66,
+      383,
+      117,
+      31,
+      884,
+      117,
+      1,
+      789,
+      315,
+      270,
+      259,
+      361,
+      308,
+      293,
+      293,
+      299,
+      319,
+      299,
+      297,
+      306,
+      304,
+      306,
+      302,
+      302,
+      305,
+      305,
+      311,
+      18
+    ]
+  },
+  "attempt_outcomes": {
+    "admitted": 64066,
+    "refused": 1048,
+    "timeout": 0,
+    "error": 0,
+    "overflow": 0
+  },
+  "retry": {
+    "retried_events": 0,
+    "resends": 0,
+    "acked_after_retry": 0,
+    "gave_up": 0,
+    "spool_dropped": 0,
+    "spool_peak": 0,
+    "enabled": false,
+    "ack_delay_ms_p50": null,
+    "ack_delay_ms_p99": null,
+    "never_acknowledged": 0
+  },
+  "accepted_total": 64066,
+  "rejected_total": 1048,
+  "per_tenant": {
+    "tenant_0": {
+      "admitted": 128,
+      "lat_service_p50_ms": 18.208,
+      "lat_service_p99_ms": 1871.339
+    },
+    "tenant_1": {
+      "admitted": 128,
+      "lat_service_p50_ms": 17.318,
+      "lat_service_p99_ms": 1335.538
+    },
+    "tenant_10": {
+      "admitted": 127,
+      "refused": 1,
+      "lat_service_p50_ms": 18.243,
+      "lat_service_p99_ms": 2170.234
+    },
+    "tenant_100": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 17.863,
+      "lat_service_p99_ms": 2038.001
+    },
+    "tenant_101": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.491,
+      "lat_service_p99_ms": 1996.174
+    },
+    "tenant_102": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 17.584,
+      "lat_service_p99_ms": 2034.213
+    },
+    "tenant_103": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.448,
+      "lat_service_p99_ms": 1992.14
+    },
+    "tenant_104": {
+      "admitted": 119,
+      "refused": 8,
+      "lat_service_p50_ms": 17.464,
+      "lat_service_p99_ms": 2027.705
+    },
+    "tenant_105": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.236,
+      "lat_service_p99_ms": 1908.234
+    },
+    "tenant_106": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.2,
+      "lat_service_p99_ms": 1920.047
+    },
+    "tenant_107": {
+      "admitted": 121,
+      "refused": 6,
+      "lat_service_p50_ms": 18.184,
+      "lat_service_p99_ms": 1871.462
+    },
+    "tenant_108": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.078,
+      "lat_service_p99_ms": 1951.447
+    },
+    "tenant_109": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.546,
+      "lat_service_p99_ms": 1984.616
+    },
+    "tenant_11": {
+      "admitted": 123,
+      "refused": 5,
+      "lat_service_p50_ms": 18.357,
+      "lat_service_p99_ms": 1277.439
+    },
+    "tenant_110": {
+      "admitted": 114,
+      "refused": 13,
+      "lat_service_p50_ms": 17.56,
+      "lat_service_p99_ms": 1973.773
+    },
+    "tenant_111": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.543,
+      "lat_service_p99_ms": 1939.944
+    },
+    "tenant_112": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 18.173,
+      "lat_service_p99_ms": 1990.703
+    },
+    "tenant_113": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.045,
+      "lat_service_p99_ms": 1896.153
+    },
+    "tenant_114": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.864,
+      "lat_service_p99_ms": 1931.139
+    },
+    "tenant_115": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.074,
+      "lat_service_p99_ms": 1826.509
+    },
+    "tenant_116": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 17.935,
+      "lat_service_p99_ms": 1922.289
+    },
+    "tenant_117": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.039,
+      "lat_service_p99_ms": 1922.82
+    },
+    "tenant_118": {
+      "admitted": 119,
+      "refused": 8,
+      "lat_service_p50_ms": 17.942,
+      "lat_service_p99_ms": 1984.422
+    },
+    "tenant_119": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.026,
+      "lat_service_p99_ms": 1819.27
+    },
+    "tenant_12": {
+      "admitted": 126,
+      "refused": 2,
+      "lat_service_p50_ms": 17.911,
+      "lat_service_p99_ms": 1958.263
+    },
+    "tenant_120": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 18.262,
+      "lat_service_p99_ms": 1825.062
+    },
+    "tenant_121": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.49,
+      "lat_service_p99_ms": 1753.558
+    },
+    "tenant_122": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 17.303,
+      "lat_service_p99_ms": 1955.399
+    },
+    "tenant_123": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.649,
+      "lat_service_p99_ms": 1911.624
+    },
+    "tenant_124": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 17.756,
+      "lat_service_p99_ms": 1767.055
+    },
+    "tenant_125": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.473,
+      "lat_service_p99_ms": 1930.735
+    },
+    "tenant_126": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.479,
+      "lat_service_p99_ms": 1920.469
+    },
+    "tenant_127": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.832,
+      "lat_service_p99_ms": 1917.821
+    },
+    "tenant_128": {
+      "admitted": 114,
+      "refused": 13,
+      "lat_service_p50_ms": 17.595,
+      "lat_service_p99_ms": 1894.749
+    },
+    "tenant_129": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.97,
+      "lat_service_p99_ms": 2230.923
+    },
+    "tenant_13": {
+      "admitted": 126,
+      "refused": 2,
+      "lat_service_p50_ms": 18.255,
+      "lat_service_p99_ms": 2182.11
+    },
+    "tenant_130": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.654,
+      "lat_service_p99_ms": 1898.665
+    },
+    "tenant_131": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.108,
+      "lat_service_p99_ms": 1904.51
+    },
+    "tenant_132": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.576,
+      "lat_service_p99_ms": 1863.232
+    },
+    "tenant_133": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.472,
+      "lat_service_p99_ms": 1869.193
+    },
+    "tenant_134": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.612,
+      "lat_service_p99_ms": 1889.652
+    },
+    "tenant_135": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.541,
+      "lat_service_p99_ms": 1871.449
+    },
+    "tenant_136": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 17.949,
+      "lat_service_p99_ms": 1856.971
+    },
+    "tenant_137": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 17.903,
+      "lat_service_p99_ms": 1674.197
+    },
+    "tenant_138": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.315,
+      "lat_service_p99_ms": 1871.178
+    },
+    "tenant_139": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.281,
+      "lat_service_p99_ms": 1865.072
+    },
+    "tenant_14": {
+      "admitted": 123,
+      "refused": 5,
+      "lat_service_p50_ms": 18.052,
+      "lat_service_p99_ms": 2106.945
+    },
+    "tenant_140": {
+      "admitted": 114,
+      "refused": 13,
+      "lat_service_p50_ms": 17.755,
+      "lat_service_p99_ms": 1869.415
+    },
+    "tenant_141": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.397,
+      "lat_service_p99_ms": 1873.095
+    },
+    "tenant_142": {
+      "admitted": 117,
+      "refused": 10,
+      "lat_service_p50_ms": 18.211,
+      "lat_service_p99_ms": 1757.647
+    },
+    "tenant_143": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.576,
+      "lat_service_p99_ms": 1823.287
+    },
+    "tenant_144": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.195,
+      "lat_service_p99_ms": 1890.064
+    },
+    "tenant_145": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.113,
+      "lat_service_p99_ms": 1859.003
+    },
+    "tenant_146": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 17.866,
+      "lat_service_p99_ms": 1867.853
+    },
+    "tenant_147": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.624,
+      "lat_service_p99_ms": 1805.28
+    },
+    "tenant_148": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 17.827,
+      "lat_service_p99_ms": 1823.421
+    },
+    "tenant_149": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.044,
+      "lat_service_p99_ms": 1849.27
+    },
+    "tenant_15": {
+      "admitted": 127,
+      "refused": 1,
+      "lat_service_p50_ms": 18.319,
+      "lat_service_p99_ms": 1967.009
+    },
+    "tenant_150": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.018,
+      "lat_service_p99_ms": 1816.883
+    },
+    "tenant_151": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.164,
+      "lat_service_p99_ms": 1844.925
+    },
+    "tenant_152": {
+      "admitted": 121,
+      "refused": 6,
+      "lat_service_p50_ms": 17.245,
+      "lat_service_p99_ms": 1762.091
+    },
+    "tenant_153": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.129,
+      "lat_service_p99_ms": 1848.609
+    },
+    "tenant_154": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.528,
+      "lat_service_p99_ms": 1831.928
+    },
+    "tenant_155": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.732,
+      "lat_service_p99_ms": 1779.434
+    },
+    "tenant_156": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.889,
+      "lat_service_p99_ms": 1794.384
+    },
+    "tenant_157": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.607,
+      "lat_service_p99_ms": 1718.969
+    },
+    "tenant_158": {
+      "admitted": 120,
+      "refused": 7,
+      "lat_service_p50_ms": 17.871,
+      "lat_service_p99_ms": 1677.605
+    },
+    "tenant_159": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.496,
+      "lat_service_p99_ms": 1803.738
+    },
+    "tenant_16": {
+      "admitted": 124,
+      "refused": 4,
+      "lat_service_p50_ms": 17.946,
+      "lat_service_p99_ms": 1773.477
+    },
+    "tenant_160": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.847,
+      "lat_service_p99_ms": 1729.634
+    },
+    "tenant_161": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.217,
+      "lat_service_p99_ms": 1771.227
+    },
+    "tenant_162": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.164,
+      "lat_service_p99_ms": 1806.009
+    },
+    "tenant_163": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.928,
+      "lat_service_p99_ms": 1874.411
+    },
+    "tenant_164": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.36,
+      "lat_service_p99_ms": 1795.331
+    },
+    "tenant_165": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.203,
+      "lat_service_p99_ms": 1751.671
+    },
+    "tenant_166": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.036,
+      "lat_service_p99_ms": 1788.521
+    },
+    "tenant_167": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.616,
+      "lat_service_p99_ms": 1777.426
+    },
+    "tenant_168": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 17.71,
+      "lat_service_p99_ms": 1387.676
+    },
+    "tenant_169": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 17.339,
+      "lat_service_p99_ms": 1804.706
+    },
+    "tenant_17": {
+      "admitted": 128,
+      "lat_service_p50_ms": 18.628,
+      "lat_service_p99_ms": 2137.793
+    },
+    "tenant_170": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.448,
+      "lat_service_p99_ms": 1791.248
+    },
+    "tenant_171": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.82,
+      "lat_service_p99_ms": 1728.212
+    },
+    "tenant_172": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.933,
+      "lat_service_p99_ms": 1724.149
+    },
+    "tenant_173": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.023,
+      "lat_service_p99_ms": 1741.977
+    },
+    "tenant_174": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.022,
+      "lat_service_p99_ms": 1618.099
+    },
+    "tenant_175": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.743,
+      "lat_service_p99_ms": 1608.281
+    },
+    "tenant_176": {
+      "admitted": 121,
+      "refused": 6,
+      "lat_service_p50_ms": 17.924,
+      "lat_service_p99_ms": 1768.002
+    },
+    "tenant_177": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.189,
+      "lat_service_p99_ms": 1781.151
+    },
+    "tenant_178": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.559,
+      "lat_service_p99_ms": 1651.176
+    },
+    "tenant_179": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.674,
+      "lat_service_p99_ms": 1759.435
+    },
+    "tenant_18": {
+      "admitted": 124,
+      "refused": 4,
+      "lat_service_p50_ms": 17.672,
+      "lat_service_p99_ms": 1929.67
+    },
+    "tenant_180": {
+      "admitted": 116,
+      "refused": 11,
+      "lat_service_p50_ms": 17.568,
+      "lat_service_p99_ms": 1755.434
+    },
+    "tenant_181": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.105,
+      "lat_service_p99_ms": 1747.928
+    },
+    "tenant_182": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.145,
+      "lat_service_p99_ms": 1741.441
+    },
+    "tenant_183": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 17.784,
+      "lat_service_p99_ms": 1689.448
+    },
+    "tenant_184": {
+      "admitted": 119,
+      "refused": 8,
+      "lat_service_p50_ms": 17.709,
+      "lat_service_p99_ms": 1661.433
+    },
+    "tenant_185": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.896,
+      "lat_service_p99_ms": 1736.539
+    },
+    "tenant_186": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 17.853,
+      "lat_service_p99_ms": 1765.115
+    },
+    "tenant_187": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 17.547,
+      "lat_service_p99_ms": 1576.603
+    },
+    "tenant_188": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.148,
+      "lat_service_p99_ms": 1696.041
+    },
+    "tenant_189": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.238,
+      "lat_service_p99_ms": 1715.827
+    },
+    "tenant_19": {
+      "admitted": 128,
+      "lat_service_p50_ms": 17.852,
+      "lat_service_p99_ms": 2337.402
+    },
+    "tenant_190": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.539,
+      "lat_service_p99_ms": 1724.405
+    },
+    "tenant_191": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.251,
+      "lat_service_p99_ms": 1664.357
+    },
+    "tenant_192": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 17.828,
+      "lat_service_p99_ms": 1628.807
+    },
+    "tenant_193": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 18.108,
+      "lat_service_p99_ms": 1721.857
+    },
+    "tenant_194": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.434,
+      "lat_service_p99_ms": 1726.09
+    },
+    "tenant_195": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.66,
+      "lat_service_p99_ms": 1686.713
+    },
+    "tenant_196": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.815,
+      "lat_service_p99_ms": 1688.152
+    },
+    "tenant_197": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.405,
+      "lat_service_p99_ms": 1671.385
+    },
+    "tenant_198": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 17.754,
+      "lat_service_p99_ms": 1682.47
+    },
+    "tenant_199": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.165,
+      "lat_service_p99_ms": 1685.032
+    },
+    "tenant_2": {
+      "admitted": 118,
+      "refused": 10,
+      "lat_service_p50_ms": 17.002,
+      "lat_service_p99_ms": 1076.015
+    },
+    "tenant_20": {
+      "admitted": 122,
+      "refused": 6,
+      "lat_service_p50_ms": 17.484,
+      "lat_service_p99_ms": 2232.697
+    },
+    "tenant_200": {
+      "admitted": 119,
+      "refused": 8,
+      "lat_service_p50_ms": 18.575,
+      "lat_service_p99_ms": 1663.483
+    },
+    "tenant_201": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.435,
+      "lat_service_p99_ms": 1600.104
+    },
+    "tenant_202": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.816,
+      "lat_service_p99_ms": 1596.736
+    },
+    "tenant_203": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.642,
+      "lat_service_p99_ms": 1591.056
+    },
+    "tenant_204": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.432,
+      "lat_service_p99_ms": 1623.624
+    },
+    "tenant_205": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.167,
+      "lat_service_p99_ms": 1695.15
+    },
+    "tenant_206": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 17.744,
+      "lat_service_p99_ms": 1587.276
+    },
+    "tenant_207": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 17.964,
+      "lat_service_p99_ms": 1054.735
+    },
+    "tenant_208": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.07,
+      "lat_service_p99_ms": 1655.324
+    },
+    "tenant_209": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.051,
+      "lat_service_p99_ms": 1578.248
+    },
+    "tenant_21": {
+      "admitted": 128,
+      "lat_service_p50_ms": 17.856,
+      "lat_service_p99_ms": 2075.653
+    },
+    "tenant_210": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 17.857,
+      "lat_service_p99_ms": 1639.145
+    },
+    "tenant_211": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.104,
+      "lat_service_p99_ms": 1395.77
+    },
+    "tenant_212": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.915,
+      "lat_service_p99_ms": 1520.896
+    },
+    "tenant_213": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.424,
+      "lat_service_p99_ms": 1650.882
+    },
+    "tenant_214": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.943,
+      "lat_service_p99_ms": 1402.531
+    },
+    "tenant_215": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.991,
+      "lat_service_p99_ms": 1625.357
+    },
+    "tenant_216": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.832,
+      "lat_service_p99_ms": 1652.028
+    },
+    "tenant_217": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.382,
+      "lat_service_p99_ms": 1611.548
+    },
+    "tenant_218": {
+      "admitted": 121,
+      "refused": 6,
+      "lat_service_p50_ms": 17.885,
+      "lat_service_p99_ms": 1319.525
+    },
+    "tenant_219": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.989,
+      "lat_service_p99_ms": 1508.16
+    },
+    "tenant_22": {
+      "admitted": 127,
+      "refused": 1,
+      "lat_service_p50_ms": 17.593,
+      "lat_service_p99_ms": 2110.794
+    },
+    "tenant_220": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.007,
+      "lat_service_p99_ms": 1611.925
+    },
+    "tenant_221": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.0,
+      "lat_service_p99_ms": 1689.312
+    },
+    "tenant_222": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 17.597,
+      "lat_service_p99_ms": 1638.813
+    },
+    "tenant_223": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 17.319,
+      "lat_service_p99_ms": 1577.656
+    },
+    "tenant_224": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 17.57,
+      "lat_service_p99_ms": 1467.012
+    },
+    "tenant_225": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.079,
+      "lat_service_p99_ms": 1295.861
+    },
+    "tenant_226": {
+      "admitted": 120,
+      "refused": 7,
+      "lat_service_p50_ms": 17.982,
+      "lat_service_p99_ms": 1477.388
+    },
+    "tenant_227": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.968,
+      "lat_service_p99_ms": 1525.918
+    },
+    "tenant_228": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.223,
+      "lat_service_p99_ms": 1559.094
+    },
+    "tenant_229": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.888,
+      "lat_service_p99_ms": 1399.822
+    },
+    "tenant_23": {
+      "admitted": 127,
+      "refused": 1,
+      "lat_service_p50_ms": 17.902,
+      "lat_service_p99_ms": 2152.126
+    },
+    "tenant_230": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 17.948,
+      "lat_service_p99_ms": 1610.898
+    },
+    "tenant_231": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.034,
+      "lat_service_p99_ms": 1583.782
+    },
+    "tenant_232": {
+      "admitted": 115,
+      "refused": 12,
+      "lat_service_p50_ms": 17.244,
+      "lat_service_p99_ms": 1473.399
+    },
+    "tenant_233": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.897,
+      "lat_service_p99_ms": 1509.807
+    },
+    "tenant_234": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.549,
+      "lat_service_p99_ms": 1557.45
+    },
+    "tenant_235": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.043,
+      "lat_service_p99_ms": 1521.815
+    },
+    "tenant_236": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 17.609,
+      "lat_service_p99_ms": 1519.132
+    },
+    "tenant_237": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.294,
+      "lat_service_p99_ms": 1453.965
+    },
+    "tenant_238": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.211,
+      "lat_service_p99_ms": 1551.79
+    },
+    "tenant_239": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.07,
+      "lat_service_p99_ms": 1485.079
+    },
+    "tenant_24": {
+      "admitted": 124,
+      "refused": 4,
+      "lat_service_p50_ms": 17.755,
+      "lat_service_p99_ms": 1905.387
+    },
+    "tenant_240": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 17.903,
+      "lat_service_p99_ms": 1477.473
+    },
+    "tenant_241": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.012,
+      "lat_service_p99_ms": 1548.125
+    },
+    "tenant_242": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.215,
+      "lat_service_p99_ms": 1446.933
+    },
+    "tenant_243": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.965,
+      "lat_service_p99_ms": 1473.904
+    },
+    "tenant_244": {
+      "admitted": 120,
+      "refused": 7,
+      "lat_service_p50_ms": 17.942,
+      "lat_service_p99_ms": 1574.255
+    },
+    "tenant_245": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.057,
+      "lat_service_p99_ms": 1543.988
+    },
+    "tenant_246": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.009,
+      "lat_service_p99_ms": 1484.363
+    },
+    "tenant_247": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.178,
+      "lat_service_p99_ms": 1555.302
+    },
+    "tenant_248": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.039,
+      "lat_service_p99_ms": 1559.138
+    },
+    "tenant_249": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.993,
+      "lat_service_p99_ms": 1663.179
+    },
+    "tenant_25": {
+      "admitted": 125,
+      "refused": 3,
+      "lat_service_p50_ms": 17.588,
+      "lat_service_p99_ms": 2249.218
+    },
+    "tenant_250": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 17.797,
+      "lat_service_p99_ms": 1439.397
+    },
+    "tenant_251": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.351,
+      "lat_service_p99_ms": 1792.458
+    },
+    "tenant_252": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.188,
+      "lat_service_p99_ms": 1506.231
+    },
+    "tenant_253": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 17.834,
+      "lat_service_p99_ms": 1549.27
+    },
+    "tenant_254": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.549,
+      "lat_service_p99_ms": 1441.695
+    },
+    "tenant_255": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.698,
+      "lat_service_p99_ms": 1443.953
+    },
+    "tenant_256": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.525,
+      "lat_service_p99_ms": 1501.219
+    },
+    "tenant_257": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.206,
+      "lat_service_p99_ms": 1505.036
+    },
+    "tenant_258": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.527,
+      "lat_service_p99_ms": 1396.536
+    },
+    "tenant_259": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.173,
+      "lat_service_p99_ms": 1473.34
+    },
+    "tenant_26": {
+      "admitted": 125,
+      "refused": 3,
+      "lat_service_p50_ms": 18.373,
+      "lat_service_p99_ms": 1924.467
+    },
+    "tenant_260": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.893,
+      "lat_service_p99_ms": 1357.018
+    },
+    "tenant_261": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 17.705,
+      "lat_service_p99_ms": 1381.627
+    },
+    "tenant_262": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 17.686,
+      "lat_service_p99_ms": 1534.52
+    },
+    "tenant_263": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.092,
+      "lat_service_p99_ms": 1424.97
+    },
+    "tenant_264": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.597,
+      "lat_service_p99_ms": 1442.002
+    },
+    "tenant_265": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.947,
+      "lat_service_p99_ms": 1478.408
+    },
+    "tenant_266": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.029,
+      "lat_service_p99_ms": 1407.489
+    },
+    "tenant_267": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.994,
+      "lat_service_p99_ms": 1475.424
+    },
+    "tenant_268": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.407,
+      "lat_service_p99_ms": 1452.493
+    },
+    "tenant_269": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.82,
+      "lat_service_p99_ms": 1440.673
+    },
+    "tenant_27": {
+      "admitted": 128,
+      "lat_service_p50_ms": 17.965,
+      "lat_service_p99_ms": 2160.946
+    },
+    "tenant_270": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.257,
+      "lat_service_p99_ms": 1398.195
+    },
+    "tenant_271": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.93,
+      "lat_service_p99_ms": 1453.741
+    },
+    "tenant_272": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.156,
+      "lat_service_p99_ms": 1520.48
+    },
+    "tenant_273": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.107,
+      "lat_service_p99_ms": 1399.663
+    },
+    "tenant_274": {
+      "admitted": 121,
+      "refused": 6,
+      "lat_service_p50_ms": 18.195,
+      "lat_service_p99_ms": 1404.546
+    },
+    "tenant_275": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.321,
+      "lat_service_p99_ms": 1434.255
+    },
+    "tenant_276": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.826,
+      "lat_service_p99_ms": 1414.375
+    },
+    "tenant_277": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.039,
+      "lat_service_p99_ms": 1440.054
+    },
+    "tenant_278": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 17.168,
+      "lat_service_p99_ms": 1607.987
+    },
+    "tenant_279": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.377,
+      "lat_service_p99_ms": 1640.935
+    },
+    "tenant_28": {
+      "admitted": 125,
+      "refused": 3,
+      "lat_service_p50_ms": 18.182,
+      "lat_service_p99_ms": 1899.669
+    },
+    "tenant_280": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.08,
+      "lat_service_p99_ms": 1391.696
+    },
+    "tenant_281": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.159,
+      "lat_service_p99_ms": 1378.37
+    },
+    "tenant_282": {
+      "admitted": 117,
+      "refused": 10,
+      "lat_service_p50_ms": 17.964,
+      "lat_service_p99_ms": 1369.227
+    },
+    "tenant_283": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.582,
+      "lat_service_p99_ms": 1422.632
+    },
+    "tenant_284": {
+      "admitted": 119,
+      "refused": 8,
+      "lat_service_p50_ms": 17.805,
+      "lat_service_p99_ms": 1523.663
+    },
+    "tenant_285": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.917,
+      "lat_service_p99_ms": 1343.476
+    },
+    "tenant_286": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.068,
+      "lat_service_p99_ms": 1384.21
+    },
+    "tenant_287": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.919,
+      "lat_service_p99_ms": 1173.284
+    },
+    "tenant_288": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 17.921,
+      "lat_service_p99_ms": 1096.269
+    },
+    "tenant_289": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.99,
+      "lat_service_p99_ms": 1273.293
+    },
+    "tenant_29": {
+      "admitted": 127,
+      "refused": 1,
+      "lat_service_p50_ms": 17.685,
+      "lat_service_p99_ms": 2215.879
+    },
+    "tenant_290": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.148,
+      "lat_service_p99_ms": 1189.272
+    },
+    "tenant_291": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.353,
+      "lat_service_p99_ms": 1540.048
+    },
+    "tenant_292": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 17.828,
+      "lat_service_p99_ms": 1455.81
+    },
+    "tenant_293": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.207,
+      "lat_service_p99_ms": 1630.199
+    },
+    "tenant_294": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.942,
+      "lat_service_p99_ms": 1608.639
+    },
+    "tenant_295": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.3,
+      "lat_service_p99_ms": 1388.318
+    },
+    "tenant_296": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.099,
+      "lat_service_p99_ms": 1368.752
+    },
+    "tenant_297": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.347,
+      "lat_service_p99_ms": 1515.918
+    },
+    "tenant_298": {
+      "admitted": 117,
+      "refused": 10,
+      "lat_service_p50_ms": 18.137,
+      "lat_service_p99_ms": 1474.155
+    },
+    "tenant_299": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.655,
+      "lat_service_p99_ms": 1292.643
+    },
+    "tenant_3": {
+      "admitted": 127,
+      "refused": 1,
+      "lat_service_p50_ms": 18.47,
+      "lat_service_p99_ms": 1757.865
+    },
+    "tenant_30": {
+      "admitted": 125,
+      "refused": 3,
+      "lat_service_p50_ms": 18.691,
+      "lat_service_p99_ms": 2269.126
+    },
+    "tenant_300": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.295,
+      "lat_service_p99_ms": 1233.083
+    },
+    "tenant_301": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.191,
+      "lat_service_p99_ms": 1287.989
+    },
+    "tenant_302": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 17.48,
+      "lat_service_p99_ms": 1303.501
+    },
+    "tenant_303": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 18.244,
+      "lat_service_p99_ms": 1335.086
+    },
+    "tenant_304": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.369,
+      "lat_service_p99_ms": 1333.591
+    },
+    "tenant_305": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.616,
+      "lat_service_p99_ms": 1332.598
+    },
+    "tenant_306": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.764,
+      "lat_service_p99_ms": 1549.222
+    },
+    "tenant_307": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.364,
+      "lat_service_p99_ms": 1295.064
+    },
+    "tenant_308": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.115,
+      "lat_service_p99_ms": 1417.56
+    },
+    "tenant_309": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.322,
+      "lat_service_p99_ms": 1556.224
+    },
+    "tenant_31": {
+      "admitted": 127,
+      "refused": 1,
+      "lat_service_p50_ms": 18.566,
+      "lat_service_p99_ms": 1967.289
+    },
+    "tenant_310": {
+      "admitted": 117,
+      "refused": 10,
+      "lat_service_p50_ms": 17.961,
+      "lat_service_p99_ms": 1202.663
+    },
+    "tenant_311": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 18.005,
+      "lat_service_p99_ms": 1311.52
+    },
+    "tenant_312": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 17.991,
+      "lat_service_p99_ms": 1534.508
+    },
+    "tenant_313": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.426,
+      "lat_service_p99_ms": 1120.984
+    },
+    "tenant_314": {
+      "admitted": 117,
+      "refused": 10,
+      "lat_service_p50_ms": 17.914,
+      "lat_service_p99_ms": 1310.853
+    },
+    "tenant_315": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.509,
+      "lat_service_p99_ms": 1380.453
+    },
+    "tenant_316": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 17.762,
+      "lat_service_p99_ms": 1416.983
+    },
+    "tenant_317": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.502,
+      "lat_service_p99_ms": 1380.564
+    },
+    "tenant_318": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.554,
+      "lat_service_p99_ms": 1463.255
+    },
+    "tenant_319": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.765,
+      "lat_service_p99_ms": 1387.198
+    },
+    "tenant_32": {
+      "admitted": 128,
+      "lat_service_p50_ms": 17.833,
+      "lat_service_p99_ms": 2175.659
+    },
+    "tenant_320": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.507,
+      "lat_service_p99_ms": 1393.25
+    },
+    "tenant_321": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.781,
+      "lat_service_p99_ms": 1536.7
+    },
+    "tenant_322": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 17.995,
+      "lat_service_p99_ms": 1427.678
+    },
+    "tenant_323": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.916,
+      "lat_service_p99_ms": 1289.618
+    },
+    "tenant_324": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 17.521,
+      "lat_service_p99_ms": 1128.169
+    },
+    "tenant_325": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.667,
+      "lat_service_p99_ms": 1514.364
+    },
+    "tenant_326": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.937,
+      "lat_service_p99_ms": 1244.889
+    },
+    "tenant_327": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.374,
+      "lat_service_p99_ms": 1274.867
+    },
+    "tenant_328": {
+      "admitted": 116,
+      "refused": 11,
+      "lat_service_p50_ms": 17.597,
+      "lat_service_p99_ms": 1476.159
+    },
+    "tenant_329": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.515,
+      "lat_service_p99_ms": 1353.093
+    },
+    "tenant_33": {
+      "admitted": 125,
+      "refused": 3,
+      "lat_service_p50_ms": 18.152,
+      "lat_service_p99_ms": 2089.497
+    },
+    "tenant_330": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.926,
+      "lat_service_p99_ms": 1195.049
+    },
+    "tenant_331": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.527,
+      "lat_service_p99_ms": 1184.643
+    },
+    "tenant_332": {
+      "admitted": 121,
+      "refused": 6,
+      "lat_service_p50_ms": 17.527,
+      "lat_service_p99_ms": 1351.833
+    },
+    "tenant_333": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.424,
+      "lat_service_p99_ms": 1219.462
+    },
+    "tenant_334": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 17.696,
+      "lat_service_p99_ms": 1240.798
+    },
+    "tenant_335": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 17.654,
+      "lat_service_p99_ms": 1214.021
+    },
+    "tenant_336": {
+      "admitted": 118,
+      "refused": 9,
+      "lat_service_p50_ms": 17.968,
+      "lat_service_p99_ms": 1380.296
+    },
+    "tenant_337": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.536,
+      "lat_service_p99_ms": 1356.13
+    },
+    "tenant_338": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 17.858,
+      "lat_service_p99_ms": 1010.151
+    },
+    "tenant_339": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.486,
+      "lat_service_p99_ms": 1019.389
+    },
+    "tenant_34": {
+      "admitted": 126,
+      "refused": 2,
+      "lat_service_p50_ms": 17.873,
+      "lat_service_p99_ms": 2094.313
+    },
+    "tenant_340": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.768,
+      "lat_service_p99_ms": 1154.015
+    },
+    "tenant_341": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.9,
+      "lat_service_p99_ms": 1053.714
+    },
+    "tenant_342": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.449,
+      "lat_service_p99_ms": 1142.153
+    },
+    "tenant_343": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.368,
+      "lat_service_p99_ms": 1171.739
+    },
+    "tenant_344": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.2,
+      "lat_service_p99_ms": 1149.91
+    },
+    "tenant_345": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.226,
+      "lat_service_p99_ms": 1097.274
+    },
+    "tenant_346": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.457,
+      "lat_service_p99_ms": 1199.666
+    },
+    "tenant_347": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.231,
+      "lat_service_p99_ms": 1189.141
+    },
+    "tenant_348": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.393,
+      "lat_service_p99_ms": 1183.888
+    },
+    "tenant_349": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.202,
+      "lat_service_p99_ms": 1213.579
+    },
+    "tenant_35": {
+      "admitted": 128,
+      "lat_service_p50_ms": 18.119,
+      "lat_service_p99_ms": 2115.628
+    },
+    "tenant_350": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.051,
+      "lat_service_p99_ms": 1197.521
+    },
+    "tenant_351": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.951,
+      "lat_service_p99_ms": 1207.037
+    },
+    "tenant_352": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 17.889,
+      "lat_service_p99_ms": 1186.015
+    },
+    "tenant_353": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.011,
+      "lat_service_p99_ms": 1219.391
+    },
+    "tenant_354": {
+      "admitted": 118,
+      "refused": 9,
+      "lat_service_p50_ms": 18.243,
+      "lat_service_p99_ms": 1222.08
+    },
+    "tenant_355": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.184,
+      "lat_service_p99_ms": 1149.018
+    },
+    "tenant_356": {
+      "admitted": 117,
+      "refused": 10,
+      "lat_service_p50_ms": 17.463,
+      "lat_service_p99_ms": 1424.709
+    },
+    "tenant_357": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.306,
+      "lat_service_p99_ms": 1104.199
+    },
+    "tenant_358": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 17.532,
+      "lat_service_p99_ms": 1120.387
+    },
+    "tenant_359": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.549,
+      "lat_service_p99_ms": 1305.207
+    },
+    "tenant_36": {
+      "admitted": 127,
+      "refused": 1,
+      "lat_service_p50_ms": 18.231,
+      "lat_service_p99_ms": 2239.339
+    },
+    "tenant_360": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.386,
+      "lat_service_p99_ms": 1187.19
+    },
+    "tenant_361": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.534,
+      "lat_service_p99_ms": 920.036
+    },
+    "tenant_362": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 17.917,
+      "lat_service_p99_ms": 1159.929
+    },
+    "tenant_363": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.093,
+      "lat_service_p99_ms": 948.284
+    },
+    "tenant_364": {
+      "admitted": 117,
+      "refused": 10,
+      "lat_service_p50_ms": 17.9,
+      "lat_service_p99_ms": 1101.722
+    },
+    "tenant_365": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.454,
+      "lat_service_p99_ms": 1162.602
+    },
+    "tenant_366": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 17.902,
+      "lat_service_p99_ms": 1157.183
+    },
+    "tenant_367": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.448,
+      "lat_service_p99_ms": 1119.116
+    },
+    "tenant_368": {
+      "admitted": 121,
+      "refused": 6,
+      "lat_service_p50_ms": 17.826,
+      "lat_service_p99_ms": 1293.996
+    },
+    "tenant_369": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.221,
+      "lat_service_p99_ms": 1162.324
+    },
+    "tenant_37": {
+      "admitted": 128,
+      "lat_service_p50_ms": 17.932,
+      "lat_service_p99_ms": 2161.626
+    },
+    "tenant_370": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 18.194,
+      "lat_service_p99_ms": 1066.245
+    },
+    "tenant_371": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.785,
+      "lat_service_p99_ms": 1137.358
+    },
+    "tenant_372": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.989,
+      "lat_service_p99_ms": 1356.775
+    },
+    "tenant_373": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.639,
+      "lat_service_p99_ms": 1013.788
+    },
+    "tenant_374": {
+      "admitted": 127,
+      "lat_service_p50_ms": 19.623,
+      "lat_service_p99_ms": 1157.533
+    },
+    "tenant_375": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.109,
+      "lat_service_p99_ms": 1397.434
+    },
+    "tenant_376": {
+      "admitted": 120,
+      "refused": 7,
+      "lat_service_p50_ms": 17.992,
+      "lat_service_p99_ms": 1059.105
+    },
+    "tenant_377": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.143,
+      "lat_service_p99_ms": 1339.877
+    },
+    "tenant_378": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.756,
+      "lat_service_p99_ms": 1143.254
+    },
+    "tenant_379": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.335,
+      "lat_service_p99_ms": 1121.951
+    },
+    "tenant_38": {
+      "admitted": 128,
+      "lat_service_p50_ms": 17.999,
+      "lat_service_p99_ms": 2176.505
+    },
+    "tenant_380": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 17.863,
+      "lat_service_p99_ms": 1077.186
+    },
+    "tenant_381": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 17.987,
+      "lat_service_p99_ms": 1327.371
+    },
+    "tenant_382": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.061,
+      "lat_service_p99_ms": 1126.136
+    },
+    "tenant_383": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.577,
+      "lat_service_p99_ms": 1039.093
+    },
+    "tenant_384": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.166,
+      "lat_service_p99_ms": 1101.142
+    },
+    "tenant_385": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 18.864,
+      "lat_service_p99_ms": 1036.78
+    },
+    "tenant_386": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.318,
+      "lat_service_p99_ms": 1102.817
+    },
+    "tenant_387": {
+      "admitted": 127,
+      "lat_service_p50_ms": 19.179,
+      "lat_service_p99_ms": 1080.986
+    },
+    "tenant_388": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.334,
+      "lat_service_p99_ms": 1106.093
+    },
+    "tenant_389": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.316,
+      "lat_service_p99_ms": 1437.771
+    },
+    "tenant_39": {
+      "admitted": 128,
+      "lat_service_p50_ms": 18.279,
+      "lat_service_p99_ms": 2116.339
+    },
+    "tenant_390": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 17.801,
+      "lat_service_p99_ms": 1392.095
+    },
+    "tenant_391": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.331,
+      "lat_service_p99_ms": 1515.337
+    },
+    "tenant_392": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.808,
+      "lat_service_p99_ms": 1361.917
+    },
+    "tenant_393": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.325,
+      "lat_service_p99_ms": 1375.297
+    },
+    "tenant_394": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 17.808,
+      "lat_service_p99_ms": 1194.187
+    },
+    "tenant_395": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 18.459,
+      "lat_service_p99_ms": 1293.681
+    },
+    "tenant_396": {
+      "admitted": 116,
+      "refused": 11,
+      "lat_service_p50_ms": 18.333,
+      "lat_service_p99_ms": 1275.647
+    },
+    "tenant_397": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.449,
+      "lat_service_p99_ms": 1316.997
+    },
+    "tenant_398": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.061,
+      "lat_service_p99_ms": 1461.683
+    },
+    "tenant_399": {
+      "admitted": 127,
+      "lat_service_p50_ms": 19.242,
+      "lat_service_p99_ms": 1337.937
+    },
+    "tenant_4": {
+      "admitted": 128,
+      "lat_service_p50_ms": 18.28,
+      "lat_service_p99_ms": 1397.793
+    },
+    "tenant_40": {
+      "admitted": 126,
+      "refused": 2,
+      "lat_service_p50_ms": 17.913,
+      "lat_service_p99_ms": 2165.506
+    },
+    "tenant_400": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.986,
+      "lat_service_p99_ms": 1357.108
+    },
+    "tenant_401": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.323,
+      "lat_service_p99_ms": 1252.254
+    },
+    "tenant_402": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 17.789,
+      "lat_service_p99_ms": 1342.564
+    },
+    "tenant_403": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.953,
+      "lat_service_p99_ms": 1275.629
+    },
+    "tenant_404": {
+      "admitted": 119,
+      "refused": 8,
+      "lat_service_p50_ms": 17.995,
+      "lat_service_p99_ms": 1334.278
+    },
+    "tenant_405": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.733,
+      "lat_service_p99_ms": 1160.009
+    },
+    "tenant_406": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.179,
+      "lat_service_p99_ms": 1161.725
+    },
+    "tenant_407": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.855,
+      "lat_service_p99_ms": 1321.646
+    },
+    "tenant_408": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.017,
+      "lat_service_p99_ms": 1320.44
+    },
+    "tenant_409": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.896,
+      "lat_service_p99_ms": 1036.524
+    },
+    "tenant_41": {
+      "admitted": 128,
+      "lat_service_p50_ms": 17.942,
+      "lat_service_p99_ms": 1881.533
+    },
+    "tenant_410": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.451,
+      "lat_service_p99_ms": 1379.167
+    },
+    "tenant_411": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.225,
+      "lat_service_p99_ms": 958.236
+    },
+    "tenant_412": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 17.928,
+      "lat_service_p99_ms": 1248.208
+    },
+    "tenant_413": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.458,
+      "lat_service_p99_ms": 1200.057
+    },
+    "tenant_414": {
+      "admitted": 116,
+      "refused": 11,
+      "lat_service_p50_ms": 17.776,
+      "lat_service_p99_ms": 1288.562
+    },
+    "tenant_415": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.017,
+      "lat_service_p99_ms": 1224.328
+    },
+    "tenant_416": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.42,
+      "lat_service_p99_ms": 1265.685
+    },
+    "tenant_417": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.182,
+      "lat_service_p99_ms": 994.668
+    },
+    "tenant_418": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.159,
+      "lat_service_p99_ms": 1231.146
+    },
+    "tenant_419": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.085,
+      "lat_service_p99_ms": 1211.926
+    },
+    "tenant_42": {
+      "admitted": 125,
+      "refused": 3,
+      "lat_service_p50_ms": 17.277,
+      "lat_service_p99_ms": 2177.513
+    },
+    "tenant_420": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.387,
+      "lat_service_p99_ms": 1331.708
+    },
+    "tenant_421": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.158,
+      "lat_service_p99_ms": 1186.268
+    },
+    "tenant_422": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.102,
+      "lat_service_p99_ms": 1237.581
+    },
+    "tenant_423": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.36,
+      "lat_service_p99_ms": 993.707
+    },
+    "tenant_424": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.516,
+      "lat_service_p99_ms": 1178.822
+    },
+    "tenant_425": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 17.836,
+      "lat_service_p99_ms": 915.839
+    },
+    "tenant_426": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 18.481,
+      "lat_service_p99_ms": 1256.038
+    },
+    "tenant_427": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.288,
+      "lat_service_p99_ms": 1200.272
+    },
+    "tenant_428": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 17.714,
+      "lat_service_p99_ms": 1197.701
+    },
+    "tenant_429": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.751,
+      "lat_service_p99_ms": 1224.738
+    },
+    "tenant_43": {
+      "admitted": 127,
+      "refused": 1,
+      "lat_service_p50_ms": 18.077,
+      "lat_service_p99_ms": 2100.444
+    },
+    "tenant_430": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.735,
+      "lat_service_p99_ms": 1233.157
+    },
+    "tenant_431": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.494,
+      "lat_service_p99_ms": 1351.555
+    },
+    "tenant_432": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 18.167,
+      "lat_service_p99_ms": 1230.176
+    },
+    "tenant_433": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.853,
+      "lat_service_p99_ms": 1347.115
+    },
+    "tenant_434": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.761,
+      "lat_service_p99_ms": 1112.528
+    },
+    "tenant_435": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.805,
+      "lat_service_p99_ms": 1202.817
+    },
+    "tenant_436": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 17.878,
+      "lat_service_p99_ms": 1379.878
+    },
+    "tenant_437": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.617,
+      "lat_service_p99_ms": 892.63
+    },
+    "tenant_438": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.632,
+      "lat_service_p99_ms": 1216.92
+    },
+    "tenant_439": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.707,
+      "lat_service_p99_ms": 1219.127
+    },
+    "tenant_44": {
+      "admitted": 128,
+      "lat_service_p50_ms": 17.831,
+      "lat_service_p99_ms": 2110.117
+    },
+    "tenant_440": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.053,
+      "lat_service_p99_ms": 1184.041
+    },
+    "tenant_441": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.533,
+      "lat_service_p99_ms": 1357.517
+    },
+    "tenant_442": {
+      "admitted": 120,
+      "refused": 7,
+      "lat_service_p50_ms": 18.0,
+      "lat_service_p99_ms": 1182.865
+    },
+    "tenant_443": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.015,
+      "lat_service_p99_ms": 1166.645
+    },
+    "tenant_444": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.93,
+      "lat_service_p99_ms": 1059.764
+    },
+    "tenant_445": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 17.999,
+      "lat_service_p99_ms": 940.92
+    },
+    "tenant_446": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.659,
+      "lat_service_p99_ms": 1234.27
+    },
+    "tenant_447": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.887,
+      "lat_service_p99_ms": 1171.179
+    },
+    "tenant_448": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.42,
+      "lat_service_p99_ms": 1215.584
+    },
+    "tenant_449": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.385,
+      "lat_service_p99_ms": 1040.41
+    },
+    "tenant_45": {
+      "admitted": 128,
+      "lat_service_p50_ms": 18.05,
+      "lat_service_p99_ms": 2178.235
+    },
+    "tenant_450": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 17.687,
+      "lat_service_p99_ms": 1186.615
+    },
+    "tenant_451": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.306,
+      "lat_service_p99_ms": 1157.776
+    },
+    "tenant_452": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.046,
+      "lat_service_p99_ms": 1208.042
+    },
+    "tenant_453": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.379,
+      "lat_service_p99_ms": 1027.917
+    },
+    "tenant_454": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.677,
+      "lat_service_p99_ms": 1313.714
+    },
+    "tenant_455": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.024,
+      "lat_service_p99_ms": 1027.333
+    },
+    "tenant_456": {
+      "admitted": 119,
+      "refused": 8,
+      "lat_service_p50_ms": 17.891,
+      "lat_service_p99_ms": 1244.294
+    },
+    "tenant_457": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.037,
+      "lat_service_p99_ms": 1379.26
+    },
+    "tenant_458": {
+      "admitted": 120,
+      "refused": 7,
+      "lat_service_p50_ms": 17.83,
+      "lat_service_p99_ms": 1003.243
+    },
+    "tenant_459": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.429,
+      "lat_service_p99_ms": 1369.838
+    },
+    "tenant_46": {
+      "admitted": 126,
+      "refused": 2,
+      "lat_service_p50_ms": 17.862,
+      "lat_service_p99_ms": 2173.058
+    },
+    "tenant_460": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.056,
+      "lat_service_p99_ms": 1294.11
+    },
+    "tenant_461": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.365,
+      "lat_service_p99_ms": 1134.756
+    },
+    "tenant_462": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.387,
+      "lat_service_p99_ms": 1174.344
+    },
+    "tenant_463": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.552,
+      "lat_service_p99_ms": 1045.863
+    },
+    "tenant_464": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.194,
+      "lat_service_p99_ms": 1346.943
+    },
+    "tenant_465": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 18.662,
+      "lat_service_p99_ms": 1106.712
+    },
+    "tenant_466": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.122,
+      "lat_service_p99_ms": 1149.1
+    },
+    "tenant_467": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.634,
+      "lat_service_p99_ms": 1290.635
+    },
+    "tenant_468": {
+      "admitted": 116,
+      "refused": 11,
+      "lat_service_p50_ms": 17.613,
+      "lat_service_p99_ms": 1122.598
+    },
+    "tenant_469": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.179,
+      "lat_service_p99_ms": 1212.457
+    },
+    "tenant_47": {
+      "admitted": 128,
+      "lat_service_p50_ms": 17.761,
+      "lat_service_p99_ms": 1931.586
+    },
+    "tenant_470": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.096,
+      "lat_service_p99_ms": 1205.864
+    },
+    "tenant_471": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.84,
+      "lat_service_p99_ms": 1149.821
+    },
+    "tenant_472": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.709,
+      "lat_service_p99_ms": 1040.977
+    },
+    "tenant_473": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.622,
+      "lat_service_p99_ms": 1377.095
+    },
+    "tenant_474": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.619,
+      "lat_service_p99_ms": 1250.743
+    },
+    "tenant_475": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.422,
+      "lat_service_p99_ms": 1292.946
+    },
+    "tenant_476": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 17.653,
+      "lat_service_p99_ms": 1316.269
+    },
+    "tenant_477": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.226,
+      "lat_service_p99_ms": 1148.33
+    },
+    "tenant_478": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.047,
+      "lat_service_p99_ms": 1518.963
+    },
+    "tenant_479": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.171,
+      "lat_service_p99_ms": 1279.734
+    },
+    "tenant_48": {
+      "admitted": 125,
+      "refused": 3,
+      "lat_service_p50_ms": 18.011,
+      "lat_service_p99_ms": 2143.143
+    },
+    "tenant_480": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.84,
+      "lat_service_p99_ms": 1182.798
+    },
+    "tenant_481": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.413,
+      "lat_service_p99_ms": 1132.385
+    },
+    "tenant_482": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 17.843,
+      "lat_service_p99_ms": 1173.97
+    },
+    "tenant_483": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.737,
+      "lat_service_p99_ms": 1296.985
+    },
+    "tenant_484": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 18.108,
+      "lat_service_p99_ms": 1250.829
+    },
+    "tenant_485": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.568,
+      "lat_service_p99_ms": 1168.023
+    },
+    "tenant_486": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.752,
+      "lat_service_p99_ms": 1253.499
+    },
+    "tenant_487": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.588,
+      "lat_service_p99_ms": 1164.027
+    },
+    "tenant_488": {
+      "admitted": 120,
+      "refused": 7,
+      "lat_service_p50_ms": 17.875,
+      "lat_service_p99_ms": 1271.978
+    },
+    "tenant_489": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.325,
+      "lat_service_p99_ms": 1485.527
+    },
+    "tenant_49": {
+      "admitted": 126,
+      "refused": 2,
+      "lat_service_p50_ms": 17.953,
+      "lat_service_p99_ms": 2142.218
+    },
+    "tenant_490": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.37,
+      "lat_service_p99_ms": 1306.438
+    },
+    "tenant_491": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 17.924,
+      "lat_service_p99_ms": 1163.709
+    },
+    "tenant_492": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.852,
+      "lat_service_p99_ms": 1266.902
+    },
+    "tenant_493": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.225,
+      "lat_service_p99_ms": 1220.028
+    },
+    "tenant_494": {
+      "admitted": 119,
+      "refused": 8,
+      "lat_service_p50_ms": 17.582,
+      "lat_service_p99_ms": 1240.608
+    },
+    "tenant_495": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.471,
+      "lat_service_p99_ms": 1215.606
+    },
+    "tenant_496": {
+      "admitted": 121,
+      "refused": 6,
+      "lat_service_p50_ms": 17.868,
+      "lat_service_p99_ms": 710.928
+    },
+    "tenant_497": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.092,
+      "lat_service_p99_ms": 1230.252
+    },
+    "tenant_498": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.753,
+      "lat_service_p99_ms": 1464.101
+    },
+    "tenant_499": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.481,
+      "lat_service_p99_ms": 1287.241
+    },
+    "tenant_5": {
+      "admitted": 128,
+      "lat_service_p50_ms": 18.066,
+      "lat_service_p99_ms": 1350.628
+    },
+    "tenant_50": {
+      "admitted": 128,
+      "lat_service_p50_ms": 17.856,
+      "lat_service_p99_ms": 2129.157
+    },
+    "tenant_500": {
+      "admitted": 118,
+      "refused": 9,
+      "lat_service_p50_ms": 18.128,
+      "lat_service_p99_ms": 1248.539
+    },
+    "tenant_501": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.185,
+      "lat_service_p99_ms": 1805.715
+    },
+    "tenant_502": {
+      "admitted": 123,
+      "refused": 4,
+      "lat_service_p50_ms": 18.409,
+      "lat_service_p99_ms": 1276.207
+    },
+    "tenant_503": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.941,
+      "lat_service_p99_ms": 1389.041
+    },
+    "tenant_504": {
+      "admitted": 125,
+      "refused": 2,
+      "lat_service_p50_ms": 18.851,
+      "lat_service_p99_ms": 1791.648
+    },
+    "tenant_505": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.509,
+      "lat_service_p99_ms": 1113.96
+    },
+    "tenant_506": {
+      "admitted": 118,
+      "refused": 9,
+      "lat_service_p50_ms": 17.888,
+      "lat_service_p99_ms": 1889.57
+    },
+    "tenant_507": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.479,
+      "lat_service_p99_ms": 1774.558
+    },
+    "tenant_508": {
+      "admitted": 118,
+      "refused": 9,
+      "lat_service_p50_ms": 18.021,
+      "lat_service_p99_ms": 1546.609
+    },
+    "tenant_509": {
+      "admitted": 121,
+      "refused": 6,
+      "lat_service_p50_ms": 17.629,
+      "lat_service_p99_ms": 1195.596
+    },
+    "tenant_51": {
+      "admitted": 126,
+      "refused": 2,
+      "lat_service_p50_ms": 17.933,
+      "lat_service_p99_ms": 2116.553
+    },
+    "tenant_510": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 17.942,
+      "lat_service_p99_ms": 1659.296
+    },
+    "tenant_511": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 17.252,
+      "lat_service_p99_ms": 1302.982
+    },
+    "tenant_52": {
+      "admitted": 128,
+      "lat_service_p50_ms": 17.756,
+      "lat_service_p99_ms": 2046.396
+    },
+    "tenant_53": {
+      "admitted": 128,
+      "lat_service_p50_ms": 18.56,
+      "lat_service_p99_ms": 2184.848
+    },
+    "tenant_54": {
+      "admitted": 123,
+      "refused": 5,
+      "lat_service_p50_ms": 18.102,
+      "lat_service_p99_ms": 1982.752
+    },
+    "tenant_55": {
+      "admitted": 127,
+      "refused": 1,
+      "lat_service_p50_ms": 17.837,
+      "lat_service_p99_ms": 2065.627
+    },
+    "tenant_56": {
+      "admitted": 124,
+      "refused": 4,
+      "lat_service_p50_ms": 17.325,
+      "lat_service_p99_ms": 2172.94
+    },
+    "tenant_57": {
+      "admitted": 128,
+      "lat_service_p50_ms": 18.718,
+      "lat_service_p99_ms": 2190.833
+    },
+    "tenant_58": {
+      "admitted": 126,
+      "refused": 2,
+      "lat_service_p50_ms": 18.212,
+      "lat_service_p99_ms": 2011.464
+    },
+    "tenant_59": {
+      "admitted": 128,
+      "lat_service_p50_ms": 17.918,
+      "lat_service_p99_ms": 1923.475
+    },
+    "tenant_6": {
+      "admitted": 117,
+      "refused": 11,
+      "lat_service_p50_ms": 17.458,
+      "lat_service_p99_ms": 1656.247
+    },
+    "tenant_60": {
+      "admitted": 128,
+      "lat_service_p50_ms": 18.358,
+      "lat_service_p99_ms": 2124.711
+    },
+    "tenant_61": {
+      "admitted": 127,
+      "refused": 1,
+      "lat_service_p50_ms": 18.311,
+      "lat_service_p99_ms": 2147.889
+    },
+    "tenant_62": {
+      "admitted": 123,
+      "refused": 5,
+      "lat_service_p50_ms": 17.89,
+      "lat_service_p99_ms": 2048.474
+    },
+    "tenant_63": {
+      "admitted": 128,
+      "lat_service_p50_ms": 17.906,
+      "lat_service_p99_ms": 2096.998
+    },
+    "tenant_64": {
+      "admitted": 127,
+      "refused": 1,
+      "lat_service_p50_ms": 17.447,
+      "lat_service_p99_ms": 2081.287
+    },
+    "tenant_65": {
+      "admitted": 128,
+      "lat_service_p50_ms": 18.082,
+      "lat_service_p99_ms": 2122.858
+    },
+    "tenant_66": {
+      "admitted": 117,
+      "refused": 11,
+      "lat_service_p50_ms": 17.986,
+      "lat_service_p99_ms": 1986.867
+    },
+    "tenant_67": {
+      "admitted": 127,
+      "refused": 1,
+      "lat_service_p50_ms": 18.455,
+      "lat_service_p99_ms": 2000.43
+    },
+    "tenant_68": {
+      "admitted": 116,
+      "refused": 12,
+      "lat_service_p50_ms": 17.056,
+      "lat_service_p99_ms": 2093.193
+    },
+    "tenant_69": {
+      "admitted": 128,
+      "lat_service_p50_ms": 17.996,
+      "lat_service_p99_ms": 2093.29
+    },
+    "tenant_7": {
+      "admitted": 128,
+      "lat_service_p50_ms": 18.088,
+      "lat_service_p99_ms": 1313.092
+    },
+    "tenant_70": {
+      "admitted": 122,
+      "refused": 6,
+      "lat_service_p50_ms": 17.758,
+      "lat_service_p99_ms": 1780.968
+    },
+    "tenant_71": {
+      "admitted": 128,
+      "lat_service_p50_ms": 18.233,
+      "lat_service_p99_ms": 2108.773
+    },
+    "tenant_72": {
+      "admitted": 127,
+      "refused": 1,
+      "lat_service_p50_ms": 18.021,
+      "lat_service_p99_ms": 2047.954
+    },
+    "tenant_73": {
+      "admitted": 128,
+      "lat_service_p50_ms": 18.655,
+      "lat_service_p99_ms": 2086.823
+    },
+    "tenant_74": {
+      "admitted": 128,
+      "lat_service_p50_ms": 17.876,
+      "lat_service_p99_ms": 1926.586
+    },
+    "tenant_75": {
+      "admitted": 128,
+      "lat_service_p50_ms": 18.076,
+      "lat_service_p99_ms": 2079.802
+    },
+    "tenant_76": {
+      "admitted": 127,
+      "refused": 1,
+      "lat_service_p50_ms": 18.04,
+      "lat_service_p99_ms": 2034.378
+    },
+    "tenant_77": {
+      "admitted": 127,
+      "refused": 1,
+      "lat_service_p50_ms": 18.29,
+      "lat_service_p99_ms": 1912.67
+    },
+    "tenant_78": {
+      "admitted": 126,
+      "refused": 2,
+      "lat_service_p50_ms": 17.578,
+      "lat_service_p99_ms": 2090.887
+    },
+    "tenant_79": {
+      "admitted": 128,
+      "lat_service_p50_ms": 18.11,
+      "lat_service_p99_ms": 2042.581
+    },
+    "tenant_8": {
+      "admitted": 128,
+      "lat_service_p50_ms": 17.954,
+      "lat_service_p99_ms": 1976.796
+    },
+    "tenant_80": {
+      "admitted": 119,
+      "refused": 9,
+      "lat_service_p50_ms": 17.733,
+      "lat_service_p99_ms": 2026.185
+    },
+    "tenant_81": {
+      "admitted": 127,
+      "refused": 1,
+      "lat_service_p50_ms": 18.655,
+      "lat_service_p99_ms": 2031.225
+    },
+    "tenant_82": {
+      "admitted": 122,
+      "refused": 6,
+      "lat_service_p50_ms": 17.997,
+      "lat_service_p99_ms": 2039.272
+    },
+    "tenant_83": {
+      "admitted": 128,
+      "lat_service_p50_ms": 18.195,
+      "lat_service_p99_ms": 2086.568
+    },
+    "tenant_84": {
+      "admitted": 127,
+      "refused": 1,
+      "lat_service_p50_ms": 17.904,
+      "lat_service_p99_ms": 2027.077
+    },
+    "tenant_85": {
+      "admitted": 127,
+      "refused": 1,
+      "lat_service_p50_ms": 18.599,
+      "lat_service_p99_ms": 2011.349
+    },
+    "tenant_86": {
+      "admitted": 125,
+      "refused": 3,
+      "lat_service_p50_ms": 17.485,
+      "lat_service_p99_ms": 2057.879
+    },
+    "tenant_87": {
+      "admitted": 126,
+      "refused": 2,
+      "lat_service_p50_ms": 17.744,
+      "lat_service_p99_ms": 2020.431
+    },
+    "tenant_88": {
+      "admitted": 118,
+      "refused": 10,
+      "lat_service_p50_ms": 17.792,
+      "lat_service_p99_ms": 2028.122
+    },
+    "tenant_89": {
+      "admitted": 126,
+      "refused": 2,
+      "lat_service_p50_ms": 17.486,
+      "lat_service_p99_ms": 1993.637
+    },
+    "tenant_9": {
+      "admitted": 128,
+      "lat_service_p50_ms": 18.017,
+      "lat_service_p99_ms": 1970.173
+    },
+    "tenant_90": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.704,
+      "lat_service_p99_ms": 2005.397
+    },
+    "tenant_91": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.524,
+      "lat_service_p99_ms": 1998.755
+    },
+    "tenant_92": {
+      "admitted": 121,
+      "refused": 6,
+      "lat_service_p50_ms": 17.926,
+      "lat_service_p99_ms": 1988.988
+    },
+    "tenant_93": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.083,
+      "lat_service_p99_ms": 1655.365
+    },
+    "tenant_94": {
+      "admitted": 127,
+      "lat_service_p50_ms": 17.821,
+      "lat_service_p99_ms": 1928.699
+    },
+    "tenant_95": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.729,
+      "lat_service_p99_ms": 1991.304
+    },
+    "tenant_96": {
+      "admitted": 122,
+      "refused": 5,
+      "lat_service_p50_ms": 18.184,
+      "lat_service_p99_ms": 2013.976
+    },
+    "tenant_97": {
+      "admitted": 124,
+      "refused": 3,
+      "lat_service_p50_ms": 18.622,
+      "lat_service_p99_ms": 1730.065
+    },
+    "tenant_98": {
+      "admitted": 127,
+      "lat_service_p50_ms": 18.066,
+      "lat_service_p99_ms": 2028.952
+    },
+    "tenant_99": {
+      "admitted": 126,
+      "refused": 1,
+      "lat_service_p50_ms": 18.71,
+      "lat_service_p99_ms": 2012.95
+    }
+  },
+  "latency_from_intended_ms": {
+    "p50": 19.087,
+    "p90": 437.623,
+    "p95": 918.653,
+    "p99": 1901.558,
+    "p999": 2454.966,
+    "max": 3878.482,
+    "mean": 141.372
+  },
+  "latency_service_ms": {
+    "p50": 18.69,
+    "p95": 912.054,
+    "p99": 1900.529,
+    "max": 3877.735
+  },
+  "lag": {
+    "samples": 72,
+    "series_t": [
+      60.71,
+      62.72,
+      64.73,
+      66.75,
+      68.76,
+      70.77,
+      72.78,
+      74.8,
+      76.81,
+      78.82,
+      81.32,
+      83.35,
+      85.49,
+      87.84,
+      89.85,
+      91.87,
+      94.24,
+      96.26,
+      98.27,
+      100.29,
+      102.3,
+      104.31,
+      106.32,
+      108.33,
+      110.35,
+      112.36,
+      114.37,
+      116.38,
+      118.79,
+      120.8,
+      122.82,
+      124.83,
+      126.84,
+      128.85,
+      130.87,
+      132.88,
+      134.89,
+      136.91,
+      138.92,
+      140.94,
+      142.95,
+      144.96,
+      146.98,
+      148.99,
+      151.0,
+      153.02,
+      155.03,
+      157.04,
+      159.06,
+      161.07,
+      163.08,
+      165.09,
+      167.11,
+      169.12,
+      171.13,
+      173.15,
+      175.16,
+      177.17,
+      179.49,
+      182.51,
+      184.59,
+      186.98,
+      190.19,
+      192.21,
+      194.22,
+      196.24,
+      198.25,
+      200.27,
+      202.28,
+      204.29,
+      206.3,
+      208.32
+    ],
+    "series_lag": [
+      15700,
+      16055,
+      16666,
+      17275,
+      17882,
+      18486,
+      17004,
+      15576,
+      15985,
+      15868,
+      14393,
+      13579,
+      13694,
+      12639,
+      13141,
+      13017,
+      13454,
+      14362,
+      14687,
+      15089,
+      15700,
+      15987,
+      16063,
+      16659,
+      17060,
+      17165,
+      17496,
+      17103,
+      16709,
+      16526,
+      15889,
+      15377,
+      15849,
+      15880,
+      14605,
+      14781,
+      15398,
+      15658,
+      15984,
+      16508,
+      17126,
+      17594,
+      18163,
+      18743,
+      18979,
+      19427,
+      19865,
+      20421,
+      20447,
+      19879,
+      20356,
+      20447,
+      19834,
+      15146,
+      14919,
+      14572,
+      14221,
+      14063,
+      14041,
+      13079,
+      13775,
+      14003,
+      14817,
+      15596,
+      15372,
+      15468,
+      15985,
+      16189,
+      16302,
+      15837,
+      15041,
+      15422
+    ],
+    "drain_t": [
+      211.62,
+      213.63,
+      215.64,
+      217.66,
+      219.67,
+      221.68,
+      223.69,
+      225.71,
+      227.73,
+      229.75,
+      231.76,
+      233.77,
+      235.79,
+      237.8,
+      239.81,
+      241.82,
+      243.84,
+      245.85,
+      247.86,
+      249.87,
+      251.88,
+      253.9,
+      255.91,
+      257.93,
+      259.94,
+      261.98,
+      263.99,
+      266.0,
+      268.02,
+      270.03,
+      272.05,
+      274.06,
+      276.08,
+      278.09,
+      280.1,
+      282.11,
+      284.13,
+      286.15,
+      288.16,
+      290.17,
+      292.19,
+      294.2,
+      296.21,
+      298.23,
+      300.24,
+      302.25,
+      304.27,
+      306.28,
+      308.3,
+      310.31,
+      312.32,
+      314.34,
+      316.35,
+      318.37,
+      320.38,
+      322.4,
+      324.41,
+      326.42
+    ],
+    "drain_lag": [
+      13577,
+      13072,
+      13072,
+      12906,
+      12906,
+      12906,
+      12870,
+      12870,
+      12837,
+      12837,
+      12837,
+      12833,
+      12833,
+      12833,
+      12833,
+      12784,
+      12779,
+      12779,
+      12779,
+      12769,
+      12672,
+      12664,
+      12454,
+      12040,
+      12029,
+      11823,
+      11823,
+      11553,
+      11489,
+      11440,
+      10466,
+      10463,
+      10462,
+      9795,
+      9433,
+      8956,
+      8601,
+      8592,
+      8590,
+      8055,
+      8044,
+      7503,
+      7492,
+      7086,
+      6498,
+      5369,
+      4184,
+      2178,
+      2166,
+      1447,
+      1146,
+      1134,
+      1134,
+      818,
+      453,
+      453,
+      453,
+      0
+    ],
+    "trend_slope_eps": 3.42,
+    "max": 20447,
+    "final": 15422
+  },
+  "graph": {
+    "before": {
+      "nodes": 1,
+      "rels": 0,
+      "activities": 0
+    },
+    "after": {
+      "nodes": 274322,
+      "rels": 256264,
+      "activities": 64066
+    },
+    "nodes_added": 274321,
+    "rels_added": 256264,
+    "activities_added": 64066,
+    "activities_per_accepted_event": 1.0,
+    "activities_at_warmup_end": 17213,
+    "activities_at_emit_end": 58207,
+    "nodes_per_accepted_event": 4.2818,
+    "drained_after_s": 114.8
+  },
+  "slo": {
+    "lag_trend_limit_eps": 3.1,
+    "lag_trend_observed_eps": 3.42,
+    "slo1_lag_ok": false,
+    "loss_fraction": 0.0,
+    "loss_basis": "reconciled_by_activity_id",
+    "loss_fraction_legacy_count_based": 0.0,
+    "loss_limit": 0.01,
+    "slo2_data_ok": true,
+    "acknowledged_fraction": 0.98391,
+    "min_ack_frac": 0.5,
+    "valid": true,
+    "PASS": false,
+    "note": "A passing SLO permits up to loss_limit of accepted events to be permanently missing. That is a performance criterion, not audit completeness: reconciled.lost_window is the number of acknowledged events that never reached the graph."
+  },
+  "method": {
+    "load_type": "offered event rate (events/s), open loop",
+    "resource_type": "ingestion consumer workers",
+    "slo": "lag trend <= 0.01 x offered rate, fitted by least squares after warm-up; and <= 0.01 of accepted events missing from the graph",
+    "latency_reference": "intended send time (coordinated-omission safe)"
+  }
+}

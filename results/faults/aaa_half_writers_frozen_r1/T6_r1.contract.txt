@@ -1,0 +1,82 @@
+{
+  "contract": {
+    "body": {
+      "admission": {
+        "slack_permille": 250,
+        "soft_permille": 500,
+        "window_s": 10
+      },
+      "agg_cap": 1024,
+      "broker": {
+        "dense": true,
+        "first_acct_offset": {
+          "provenance-events/0": 0,
+          "provenance-events/1": 0,
+          "provenance-events/10": 0,
+          "provenance-events/11": 0,
+          "provenance-events/12": 0,
+          "provenance-events/13": 0,
+          "provenance-events/14": 0,
+          "provenance-events/15": 0,
+          "provenance-events/16": 0,
+          "provenance-events/17": 0,
+          "provenance-events/18": 0,
+          "provenance-events/19": 0,
+          "provenance-events/2": 0,
+          "provenance-events/20": 0,
+          "provenance-events/21": 0,
+          "provenance-events/22": 0,
+          "provenance-events/23": 0,
+          "provenance-events/24": 0,
+          "provenance-events/25": 0,
+          "provenance-events/26": 0,
+          "provenance-events/27": 0,
+          "provenance-events/28": 0,
+          "provenance-events/29": 0,
+          "provenance-events/3": 0,
+          "provenance-events/30": 0,
+          "provenance-events/31": 0,
+          "provenance-events/4": 0,
+          "provenance-events/5": 0,
+          "provenance-events/6": 0,
+          "provenance-events/7": 0,
+          "provenance-events/8": 0,
+          "provenance-events/9": 0
+        },
+        "kind": "kafka",
+        "partitioner": "murmur2",
+        "partitions": 32,
+        "topic": "provenance-events"
+      },
+      "clock_skew_ms": 1000,
+      "delta_pub_s": 80,
+      "delta_s": 45,
+      "dep": "dhakir",
+      "effective_j": 19922006,
+      "kind": "contract",
+      "period_s": 90,
+      "pk": "955ee17d282c969d9d7f4a88a85aae32d38e09373aea9d8d35541093276031f5",
+      "retention_s": 604800,
+      "sigsum_key_hash": "ce1fdf3aa146608f44504b5ed08caf67a0236490fd0c1559c9f9047c440ff152",
+      "stall_budget": 20,
+      "system_tenant": "dhakir-system",
+      "t0_ms": 0,
+      "theta_s": 180,
+      "unchk_budget": 10,
+      "v": 1,
+      "validator": "dhakir-validate/1",
+      "ver": 1,
+      "window_periods": 7200,
+      "witness_policy_sha256": "2f2aeffc330ab44257b78b2f81c87aff38b6928888ed554765ddff0abc1abf5f"
+    },
+    "sig": "37491fb34d1540d0d248d2743e353ba4b954d18d5c6c805d1fb6328a3bec0382be81a52b3eb40732c7e118f405b7d6fc6564fbf4d7be3966e8bcb99cd306be07"
+  },
+  "hash": "64bbd0c6b91340bc53209f64d962e98a8fe7477689adeef7145a133b6d6d2f30",
+  "message": "09119f4dc0ef54748569edf9bd3d0acccfa3f4b825bac92e7e711f5dd4d71cd9",
+  "public": {
+    "leaf_index": 246637,
+    "tree_size": 246638
+  },
+  "stored": "contract/dhakir/000001.json",
+  "theta_max_s": 2150
+}

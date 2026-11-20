@@ -1,0 +1,64 @@
+{
+ "acknowledged": 11525,
+ "digests_ok": 7,
+ "digests_failed": 1,
+ "covered_at_end": 11525,
+ "never_covered": 0,
+ "exposure_s": {
+  "p50": 16.882,
+  "p90": 29.905,
+  "p99": 58.852,
+  "max": 60.493,
+  "mean": 17.739
+ },
+ "uncovered_events": {
+  "max": 3149,
+  "max_at_s": 150.2,
+  "mean": 1130.7
+ },
+ "digest_gap_s": {
+  "median": 29.93,
+  "max": 60.16
+ },
+ "first_digest_s": -0.24,
+ "at_marks": [
+  {
+   "event": "database_host_reset",
+   "t_s": 91.1,
+   "acknowledged": 6372,
+   "covered": 6271,
+   "uncovered": 101,
+   "last_digest_age_s": 1.1,
+   "next_digest_after_s": 59.1
+  },
+  {
+   "event": "database_host_reachable",
+   "t_s": 103.0,
+   "acknowledged": 6531,
+   "covered": 6271,
+   "uncovered": 260,
+   "last_digest_age_s": 12.9,
+   "next_digest_after_s": 47.2
+  },
+  {
+   "event": "database_healthy",
+   "t_s": 107.0,
+   "acknowledged": 6531,
+   "covered": 6271,
+   "uncovered": 260,
+   "last_digest_age_s": 17.0,
+   "next_digest_after_s": 43.2
+  },
+  {
+   "event": "drained",
+   "t_s": 181.8,
+   "acknowledged": 11525,
+   "covered": 11484,
+   "uncovered": 41,
+   "last_digest_age_s": 1.8,
+   "next_digest_after_s": 27.9
+  }
+ ],
+ "coverage_basis": "ledger blocks (exact)",
+ "ack_basis": "attempts file (done_s)"
+}

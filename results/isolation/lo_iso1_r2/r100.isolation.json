@@ -1,0 +1,1 @@
+{"noisy": "noisy_10", "partition": 18, "victims": ["tenant_12", "tenant_40", "tenant_48", "tenant_60", "tenant_63"], "tenants_per_partition_max": 5, "partitions_used": 28}

@@ -1,0 +1,1 @@
+{"acct_mode":false,"bucket":"rec-tx2-r1-1792993055","prefix":"r1792993088417/anchors","audit_mode":"full","census":{"families":{"anchors":{"objects":512,"bytes":243388,"mean_bytes":475.4}},"wall_s":0.103,"cpu_s":0.077},"tenants":64}

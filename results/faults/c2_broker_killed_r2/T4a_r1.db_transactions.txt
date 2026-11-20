@@ -1,0 +1,13 @@
+transactionId, clientAddress, status, elapsedTime, activeLockCount, currentQuery
+"neo4j-transaction-774471", "192.168.10.151:37662", "Running", PT0.295S, 5, ""
+"neo4j-transaction-774417", "192.168.10.151:43618", "Running", PT1.142S, 5, ""
+"neo4j-transaction-774474", "192.168.10.151:32830", "Blocked by: [neo4j-transaction-774473]", PT0.075S, 1, "
+                        MATCH (snap:MerkleRootSnapshot {tree_id: $tree_id, tenant_id: $tenant_id, leaf_count: $n})
+                        WHERE snap.anchor_pending = true
+                        REMOVE snap.anchor_pending
+                        "
+"neo4j-transaction-774477", "127.0.0.1:40504", "Running", PT0.016S, 0, "SHOW TRANSACTIONS YIELD transactionId, clientAddress, status, elapsedTime, activeLockCount, currentQuery"
+"neo4j-transaction-774421", "192.168.10.151:53736", "Running", PT1.143S, 5, ""
+"neo4j-transaction-774427", "192.168.10.181:41174", "Running", PT1.068S, 5, ""
+"neo4j-transaction-774473", "192.168.10.181:36578", "Closing", PT0.084S, 2, ""
+"neo4j-transaction-774467", "192.168.10.151:36788", "Running", PT0.674S, 5, ""

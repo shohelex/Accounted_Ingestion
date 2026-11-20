@@ -1,0 +1,3 @@
+{"tenants": 8, "rep": 1, "partitions_used": 7, "partitions_total": 32,
+ "group_members": 33, "activities": 30233, "leaves": 30233,
+ "merkle_tree_rows": 8, "sum_root_covers": 30233}

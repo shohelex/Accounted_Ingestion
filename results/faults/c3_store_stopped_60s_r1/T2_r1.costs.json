@@ -1,0 +1,46 @@
+{
+ "mode": "c3",
+ "label": "T2_r1",
+ "rate": 100,
+ "tenants": 64,
+ "partitions": 32,
+ "acknowledged": 34199,
+ "sustained_eps": 99.55,
+ "latency_intended_p99_ms": 522.936,
+ "latency_service_p50_ms": 18.558,
+ "latency_service_p99_ms": 522.177,
+ "cpu_us_per_event": {
+  "api": 10111.447,
+  "consumers": 28824.951,
+  "influx": 110.758,
+  "kafka": 4136.256,
+  "neo4j": 5379.703,
+  "other": 234.247,
+  "redis": 262.998
+ },
+ "cpu_pipeline_us_per_event": 48452.358,
+ "neo4j_bytes_per_event": -9471.892,
+ "kafka_bytes_per_record": 713.5,
+ "store_requests": {},
+ "store_requests_per_event": {},
+ "anchors": 703,
+ "anchors_per_event": 0.02056,
+ "store_requests_per_anchor": {},
+ "anchor_bytes_mean": 996.8,
+ "segment_bytes_per_event": 745.638,
+ "blob_bytes": null,
+ "statement_bytes_per_period": 71181.8,
+ "commit_delay_littles_law_s": 38.886,
+ "idle_store_requests_per_period": {
+  "tier2": 4564.1,
+  "tier1": 5026.8
+ },
+ "idle_window_periods": 2.06,
+ "audit": {
+  "replay_cpu_us_per_record": 899.0,
+  "replay_records_per_s": 3524.0230288252415,
+  "replay_peak_rss_mb": 78.6,
+  "replay_records": 34199,
+  "accounting_cpu_us_per_leaf": 283.1
+ }
+}

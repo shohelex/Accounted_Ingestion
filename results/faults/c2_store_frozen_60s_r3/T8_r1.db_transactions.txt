@@ -1,0 +1,12 @@
+transactionId, clientAddress, status, elapsedTime, activeLockCount, currentQuery
+"neo4j-transaction-560207", "192.168.10.151:46704", "Running", PT0.252S, 5, ""
+"neo4j-transaction-560220", "192.168.10.151:40182", "Running", PT0.182S, 5, ""
+"neo4j-transaction-560193", "192.168.10.181:49936", "Running", PT0.811S, 5, ""
+"neo4j-transaction-560186", "192.168.10.151:45676", "Blocked by: [neo4j-transaction-560090]", PT1.039S, 2, "
+                    MERGE (tip:MerkleAnchorTip {tree_id: $tree_id, tenant_id: $tenant_id})
+                    SET tip.locked_at = timestamp()
+                    "
+"neo4j-transaction-560090", "192.168.10.181:41752", "Running", PT1.872S, 5, ""
+"neo4j-transaction-560223", "127.0.0.1:34412", "Running", PT0.018S, 0, "SHOW TRANSACTIONS YIELD transactionId, clientAddress, status, elapsedTime, activeLockCount, currentQuery"
+"neo4j-transaction-560214", "192.168.10.151:45954", "Running", PT0.255S, 5, ""
+"neo4j-transaction-560140", "192.168.10.181:59532", "Running", PT1.442S, 5, ""

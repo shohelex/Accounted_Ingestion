@@ -1,0 +1,36 @@
+{
+ "fault": "broker_host_reset",
+ "fault_start_s": 136.6,
+ "fault_end_s": 220.4,
+ "fault_lasted_s": 83.7,
+ "marks": [
+  [
+   "broker_host_reset",
+   136.6
+  ],
+  [
+   "broker_host_reachable",
+   211.3
+  ],
+  [
+   "broker_healthy",
+   220.4
+  ]
+ ],
+ "admission_basis": "attempts_by_send_time",
+ "attempts_during_fault": 5950,
+ "not_admitted_during_fault": 3432,
+ "not_admitted_after_fault": 4210,
+ "not_admitted_before_fault": 90,
+ "refused_during_fault": 3432,
+ "refused_after_fault": 4210,
+ "refused_before_fault": 90,
+ "admission_recovered_s": 77,
+ "admission_status": "recovered",
+ "lag_before_fault_median": 35506,
+ "lag_recovered_below": 71012,
+ "lag_peak": 345662,
+ "lag_peak_s": 229.1,
+ "backlog_recovered_s": 79.3,
+ "backlog_status": "recovered"
+}

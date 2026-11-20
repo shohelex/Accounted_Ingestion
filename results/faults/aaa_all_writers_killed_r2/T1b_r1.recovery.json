@@ -1,0 +1,32 @@
+{
+ "fault": "kill_consumers",
+ "fault_start_s": 100.7,
+ "fault_end_s": 359.2,
+ "fault_lasted_s": 258.6,
+ "marks": [
+  [
+   "kill_consumers",
+   100.7
+  ],
+  [
+   "restart_consumers",
+   359.2
+  ]
+ ],
+ "admission_basis": "attempts_by_send_time",
+ "attempts_during_fault": 86237,
+ "not_admitted_during_fault": 73776,
+ "not_admitted_after_fault": 31069,
+ "not_admitted_before_fault": 1372,
+ "refused_during_fault": 73776,
+ "refused_after_fault": 31069,
+ "refused_before_fault": 1372,
+ "admission_recovered_s": null,
+ "admission_status": "not_recovered",
+ "lag_before_fault_median": 2059,
+ "lag_recovered_below": 4118,
+ "lag_peak": 13491,
+ "lag_peak_s": 331.0,
+ "backlog_recovered_s": 200.1,
+ "backlog_status": "recovered"
+}

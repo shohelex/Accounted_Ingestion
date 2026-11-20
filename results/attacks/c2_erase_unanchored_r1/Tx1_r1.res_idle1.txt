@@ -1,0 +1,49 @@
+# t 1792986575.819407377
+cpu app1 compose-worker-5 38668729
+cpu app1 compose-worker-7 58497713
+cpu app1 compose-worker-10 46521447
+cpu app1 compose-worker-14 54640786
+cpu app1 compose-worker-13 50056274
+cpu app1 compose-worker-6 518087531
+cpu app1 compose-worker-15 44255169
+cpu app1 compose-worker-3 46751965
+cpu app1 compose-worker-1 48006650
+cpu app1 compose-worker-11 43545630
+cpu app1 compose-worker-12 33211280
+cpu app1 compose-worker-4 48377814
+cpu app1 compose-worker-16 56009286
+cpu app1 compose-worker-8 61953549
+cpu app1 compose-worker-2 30082082
+cpu app1 compose-worker-9 42023105
+cpu app1 dhakir-maker 18646188
+cpu app1 dhakir-api 669720727
+cpu app2 compose-worker-5 35507415
+cpu app2 compose-worker-9 29911914
+cpu app2 compose-worker-2 31037858
+cpu app2 compose-worker-8 32130082
+cpu app2 compose-worker-7 27519955
+cpu app2 compose-worker-15 30842240
+cpu app2 compose-worker-13 28800899
+cpu app2 compose-worker-10 34222728
+cpu app2 compose-worker-11 30185018
+cpu app2 compose-worker-14 33540821
+cpu app2 compose-worker-4 18983056
+cpu app2 compose-worker-16 38498254
+cpu app2 compose-worker-6 37210060
+cpu app2 compose-worker-3 29376014
+cpu app2 compose-worker-1 25546635
+cpu app2 compose-worker-12 33225009
+cpu infra dhakir-minio 6085696258
+cpu infra dhakir-kafka 3078179693
+cpu infra dhakir-redis 4554925581
+cpu infra dhakir-influx 536459818
+cpu db dhakir-neo4j 1481913680
+neo4j_bytes /data/databases/neo4j 6756607094
+neo4j_bytes /data/transactions/neo4j 2474251416
+minio minio_s3_requests_total{api="getbucketobjectlockconfig",server="127.0.0.1:9000"} 8
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 2.613307e+06
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 2.613456e+06
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 12689
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 2.005156e+06
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 8
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 196008

@@ -1,0 +1,1 @@
+{"mode": "aaa", "rate": 1000, "partitions": 32, "partition_cap_q": 3750, "total_cap": 120000, "q_window_s": 120}

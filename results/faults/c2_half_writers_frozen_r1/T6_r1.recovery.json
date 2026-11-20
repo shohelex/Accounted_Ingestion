@@ -1,0 +1,32 @@
+{
+ "fault": "consumers_frozen",
+ "fault_start_s": 93.6,
+ "fault_end_s": 174.0,
+ "fault_lasted_s": 80.3,
+ "marks": [
+  [
+   "consumers_frozen",
+   93.6
+  ],
+  [
+   "consumers_thawed",
+   174.0
+  ]
+ ],
+ "admission_basis": "attempts_by_send_time",
+ "attempts_during_fault": 8100,
+ "not_admitted_during_fault": 0,
+ "not_admitted_after_fault": 0,
+ "not_admitted_before_fault": 0,
+ "refused_during_fault": 0,
+ "refused_after_fault": 0,
+ "refused_before_fault": 0,
+ "admission_recovered_s": 0,
+ "admission_status": "never_lost",
+ "lag_before_fault_median": 399,
+ "lag_recovered_below": 798,
+ "lag_peak": 2363,
+ "lag_peak_s": 141.3,
+ "backlog_recovered_s": 1.5,
+ "backlog_status": "recovered"
+}

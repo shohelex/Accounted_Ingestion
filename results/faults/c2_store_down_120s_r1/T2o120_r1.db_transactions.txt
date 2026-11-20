@@ -1,0 +1,12 @@
+transactionId, clientAddress, status, elapsedTime, activeLockCount, currentQuery
+"neo4j-transaction-2209681", "192.168.10.151:36044", "Running", PT1.618S, 5, ""
+"neo4j-transaction-2209744", "192.168.10.151:33298", "Running", PT0.77S, 5, ""
+"neo4j-transaction-2209743", "192.168.10.151:35208", "Running", PT0.772S, 5, ""
+"neo4j-transaction-2209697", "192.168.10.181:41010", "Running", PT1.429S, 5, ""
+"neo4j-transaction-2209738", "192.168.10.181:54294", "Running", PT0.821S, 5, ""
+"neo4j-transaction-2209712", "192.168.10.181:44638", "Running", PT1.096S, 5, ""
+"neo4j-transaction-2209703", "192.168.10.151:53558", "Running", PT1.138S, 5, ""
+"neo4j-transaction-2209734", "192.168.10.151:54836", "Running", PT0.826S, 5, ""
+"neo4j-transaction-2209725", "192.168.10.151:36616", "Running", PT1.052S, 5, ""
+"neo4j-transaction-2209796", "127.0.0.1:56030", "Running", PT0.035S, 0, "SHOW TRANSACTIONS YIELD transactionId, clientAddress, status, elapsedTime, activeLockCount, currentQuery"
+"neo4j-transaction-2209759", "192.168.10.181:46686", "Running", PT0.295S, 5, ""

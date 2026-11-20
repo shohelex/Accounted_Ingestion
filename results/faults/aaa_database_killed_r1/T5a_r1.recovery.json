@@ -1,0 +1,36 @@
+{
+ "fault": "database_killed",
+ "fault_start_s": 54.6,
+ "fault_end_s": 135.8,
+ "fault_lasted_s": 81.1,
+ "marks": [
+  [
+   "database_killed",
+   54.6
+  ],
+  [
+   "database_started",
+   92.0
+  ],
+  [
+   "database_healthy",
+   135.8
+  ]
+ ],
+ "admission_basis": "attempts_by_send_time",
+ "attempts_during_fault": 9043,
+ "not_admitted_during_fault": 312,
+ "not_admitted_after_fault": 271,
+ "not_admitted_before_fault": 1074,
+ "refused_during_fault": 312,
+ "refused_after_fault": 271,
+ "refused_before_fault": 1074,
+ "admission_recovered_s": 24,
+ "admission_status": "recovered",
+ "lag_before_fault_median": 3802,
+ "lag_recovered_below": 7604,
+ "lag_peak": 11313,
+ "lag_peak_s": 139.1,
+ "backlog_recovered_s": 7.3,
+ "backlog_status": "recovered"
+}

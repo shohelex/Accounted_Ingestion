@@ -1,0 +1,4 @@
+transactionId, clientAddress, status, elapsedTime, activeLockCount, currentQuery
+"neo4j-transaction-824502", "192.168.10.151:58502", "Running", PT0.688S, 5, ""
+"neo4j-transaction-824500", "192.168.10.151:52160", "Running", PT0.739S, 5, ""
+"neo4j-transaction-824508", "127.0.0.1:36476", "Running", PT0.006S, 0, "SHOW TRANSACTIONS YIELD transactionId, clientAddress, status, elapsedTime, activeLockCount, currentQuery"

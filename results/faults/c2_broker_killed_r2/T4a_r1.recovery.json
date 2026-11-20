@@ -1,0 +1,36 @@
+{
+ "fault": "broker_killed",
+ "fault_start_s": 121.7,
+ "fault_end_s": 265.4,
+ "fault_lasted_s": 143.7,
+ "marks": [
+  [
+   "broker_killed",
+   121.7
+  ],
+  [
+   "broker_started",
+   162.1
+  ],
+  [
+   "broker_healthy",
+   265.4
+  ]
+ ],
+ "admission_basis": "attempts_by_send_time",
+ "attempts_during_fault": 93313,
+ "not_admitted_during_fault": 90462,
+ "not_admitted_after_fault": 0,
+ "not_admitted_before_fault": 0,
+ "refused_during_fault": 90462,
+ "refused_after_fault": 0,
+ "refused_before_fault": 0,
+ "admission_recovered_s": 1,
+ "admission_status": "recovered",
+ "lag_before_fault_median": 265,
+ "lag_recovered_below": 530,
+ "lag_peak": 2006,
+ "lag_peak_s": 266.3,
+ "backlog_recovered_s": 7.0,
+ "backlog_status": "recovered"
+}

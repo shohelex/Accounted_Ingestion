@@ -1,0 +1,22 @@
+{
+ "acknowledged": 1296083,
+ "present": 1296083,
+ "missing": 0,
+ "missing_sample": [],
+ "lookup_s": 9.14,
+ "rows_in_table": 1296115,
+ "written_more_than_once": 32,
+ "sample_written_more_than_once": 32,
+ "covered_by_digest": 1296083,
+ "present_not_covered": 0,
+ "digests_taken": 7,
+ "digests_failed": 1,
+ "digests_used": 7,
+ "highest_digest_block": 7,
+ "forked_blocks": {},
+ "proofs_verified": 1296083,
+ "proofs_failed": 0,
+ "ledger_verified": true,
+ "verify_error": null,
+ "verify_s": 13.01
+}

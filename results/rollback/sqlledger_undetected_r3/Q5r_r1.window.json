@@ -1,0 +1,11 @@
+{
+ "mode": "undetected",
+ "backup_t": 1793057434.585,
+ "backup_done_t": 1793057454.653,
+ "offline_t": 1793057463.028,
+ "window_s": 8.375,
+ "digests_overlapping": [],
+ "digests_inside": [],
+ "valid": true,
+ "reason": "no digest answered between the backup and the offline"
+}

@@ -1,0 +1,32 @@
+{
+ "fault": "anchor_store_frozen",
+ "fault_start_s": 62.6,
+ "fault_end_s": 126.9,
+ "fault_lasted_s": 64.3,
+ "marks": [
+  [
+   "anchor_store_frozen",
+   62.6
+  ],
+  [
+   "anchor_store_thawed",
+   126.9
+  ]
+ ],
+ "admission_basis": "attempts_by_send_time",
+ "attempts_during_fault": 6644,
+ "not_admitted_during_fault": 150,
+ "not_admitted_after_fault": 73,
+ "not_admitted_before_fault": 0,
+ "refused_during_fault": 150,
+ "refused_after_fault": 73,
+ "refused_before_fault": 0,
+ "admission_recovered_s": 11,
+ "admission_status": "recovered",
+ "lag_before_fault_median": 3668.0,
+ "lag_recovered_below": 7336.0,
+ "lag_peak": 9708,
+ "lag_peak_s": 129.2,
+ "backlog_recovered_s": 12.4,
+ "backlog_status": "recovered"
+}

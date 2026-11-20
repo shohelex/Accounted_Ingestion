@@ -1,0 +1,4 @@
+{
+"app1": {"constraint_violations": 2800, "deadlocks": 1040, "events_left_for_redelivery": 0, "dead_lettered": 0, "offset_commit_failed": 231, "kafka_send_failed": 0, "anchor_failed": 0, "anchors_backfilled": 199, "restarts": 0},
+"app2": {"constraint_violations": 1192, "deadlocks": 256, "events_left_for_redelivery": 0, "dead_lettered": 0, "offset_commit_failed": 59, "kafka_send_failed": 0, "anchor_failed": 0, "anchors_backfilled": 169, "restarts": 0}
+}

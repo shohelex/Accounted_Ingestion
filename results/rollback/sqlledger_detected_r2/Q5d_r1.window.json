@@ -1,0 +1,39 @@
+{
+ "mode": "detected",
+ "backup_t": 1793004590.447,
+ "backup_done_t": 1793004611.24,
+ "offline_t": 1793004623.202,
+ "window_s": 11.962,
+ "digests_overlapping": [
+  {
+   "t_before": 1793004619.1631,
+   "t_after": 1793004620.716,
+   "block_id": 3,
+   "before_offline_s": 2.486
+  }
+ ],
+ "digests_inside": [
+  {
+   "t_before": 1793004619.1631,
+   "t_after": 1793004620.716,
+   "block_id": 3,
+   "before_offline_s": 2.486
+  }
+ ],
+ "valid": true,
+ "reason": "1 digest(s) taken after the backup and before the offline",
+ "detection": {
+  "detected": true,
+  "verified_at": 1793004652.742,
+  "after_offline_s": 29.54,
+  "after_restored_s": 0.605,
+  "failing_block": 3,
+  "failing_digest": {
+   "t_before": 1793004619.1631,
+   "t_after": 1793004620.716,
+   "block_id": 3,
+   "before_offline_s": 2.486
+  },
+  "error": "(37368, b'The hash of block 3 in the database ledger does not match the hash provided in the digest for this block.DB-Lib error message 20018, severity 16:nGeneral SQL Server error: Check messages from the SQL ServernDB-Lib error message 20018, severity 16:nGeneral SQL Server error: Check message"
+ }
+}

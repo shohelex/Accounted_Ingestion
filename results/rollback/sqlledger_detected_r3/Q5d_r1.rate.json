@@ -1,0 +1,13 @@
+{
+ "window_s": 210.0,
+ "sinks": 32,
+ "written_at_window_start": 2804.0,
+ "written_at_window_end": 23706.7,
+ "acknowledged_before_window": 2998,
+ "backlog_at_window_start": 194.0,
+ "backlog_drained_in_window": true,
+ "committed_window_eps": 98.61,
+ "commit_eps_window_raw": 99.54,
+ "acknowledged_window_eps": 100.08,
+ "basis": "sink SINK_TICK counts, window = warm-up end to emission end; warm-up backlog subtracted (exact when backlog_drained_in_window, else a lower bound)"
+}

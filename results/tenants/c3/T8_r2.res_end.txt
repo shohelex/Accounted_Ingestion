@@ -1,0 +1,81 @@
+# t 1794037187.563592920
+cpu app1 compose-worker-5 16533852
+cpu app1 compose-worker-12 16361034
+cpu app1 compose-worker-16 14884998
+cpu app1 compose-worker-2 15444637
+cpu app1 compose-worker-10 15109006
+cpu app1 compose-worker-9 13926887
+cpu app1 compose-worker-1 14539064
+cpu app1 compose-worker-6 14188621
+cpu app1 compose-worker-4 14164152
+cpu app1 compose-worker-3 15497731
+cpu app1 compose-worker-11 15683422
+cpu app1 compose-worker-14 48219029
+cpu app1 compose-worker-8 15830647
+cpu app1 compose-worker-15 15111777
+cpu app1 compose-worker-13 45919232
+cpu app1 compose-worker-7 14241270
+cpu app1 dhakir-maker 2294201
+cpu app1 dhakir-api 608283986
+cpu app2 compose-worker-6 14237562
+cpu app2 compose-worker-1 14100832
+cpu app2 compose-worker-10 14029393
+cpu app2 compose-worker-4 13660810
+cpu app2 compose-worker-7 13704975
+cpu app2 compose-worker-12 13915563
+cpu app2 compose-worker-2 13732766
+cpu app2 compose-worker-11 13446500
+cpu app2 compose-worker-13 48415413
+cpu app2 compose-worker-5 13387147
+cpu app2 compose-worker-9 13493393
+cpu app2 compose-worker-8 40206182
+cpu app2 compose-worker-14 39605844
+cpu app2 compose-worker-15 13260778
+cpu app2 compose-worker-16 39375099
+cpu app2 compose-worker-3 39432782
+cpu infra dhakir-kafka 8102685625
+cpu infra dhakir-minio 1401175411
+cpu infra dhakir-redis 7006365191
+cpu infra dhakir-influx 513487634
+cpu db dhakir-neo4j 1048643145
+neo4j_bytes /data/databases/neo4j 500806277
+neo4j_bytes /data/transactions/neo4j 1628354964
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 288129
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 288133
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 4377
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 399530
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 209294
+kafka_logdirs {"brokers":[{"broker":1,"logDirs":[{"partitions":[{"partition":"provenance-events-24","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-26","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-28","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-30","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-1","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-3","size":4045167,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-5","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-8","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-10","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-12","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-14","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-16","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-18","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-20","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-22","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-23","size":3963992,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-25","size":3795026,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-27","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-29","size":4009989,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-0","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-31","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-2","size":5004500,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-4","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-6","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-7","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-9","size":4026618,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-11","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-13","size":3722824,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-15","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-17","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-19","size":0,"offsetLag":0,"isFuture":false},{"partition":"provenance-events-21","size":0,"offsetLag":0,"isFuture":false}],"error":null,"logDir":"/tmp/kafka-logs"}]}],"version":1}
+kafka_end provenance-events:0:0
+kafka_end provenance-events:1:0
+kafka_end provenance-events:10:0
+kafka_end provenance-events:11:0
+kafka_end provenance-events:12:0
+kafka_end provenance-events:13:5211
+kafka_end provenance-events:14:0
+kafka_end provenance-events:15:0
+kafka_end provenance-events:16:0
+kafka_end provenance-events:17:0
+kafka_end provenance-events:18:0
+kafka_end provenance-events:19:0
+kafka_end provenance-events:2:7042
+kafka_end provenance-events:20:0
+kafka_end provenance-events:21:0
+kafka_end provenance-events:22:0
+kafka_end provenance-events:23:5545
+kafka_end provenance-events:24:0
+kafka_end provenance-events:25:5319
+kafka_end provenance-events:26:0
+kafka_end provenance-events:27:0
+kafka_end provenance-events:28:0
+kafka_end provenance-events:29:5613
+kafka_end provenance-events:3:5660
+kafka_end provenance-events:30:0
+kafka_end provenance-events:31:0
+kafka_end provenance-events:4:0
+kafka_end provenance-events:5:0
+kafka_end provenance-events:6:0
+kafka_end provenance-events:7:0
+kafka_end provenance-events:8:0
+kafka_end provenance-events:9:5632

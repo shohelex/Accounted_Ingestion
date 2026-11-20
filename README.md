@@ -3,6 +3,8 @@
 Source code and data for the paper "Verifiable Ingestion of Acknowledged Provenance Events on Managed Cloud Services"
 by Md Shohel Khan, Rubaiyat Sha Fardin Siam and Muhammad Abdullah Adnan.
 
+Archived on Zenodo: https://doi.org/10.5281/zenodo.24404748
+
 The API acknowledges an event when Kafka has it and returns a signed receipt with the broker
 position. Writers append the event to the tenant's log (MMR), anchor the log in write-once storage,
 and only then commit the Kafka offset. If a writer skips a record it stores a verdict instead, which
@@ -18,7 +20,7 @@ collectors/   request-path collector
 tools/        judge, replay auditor, checkers, contract publisher
 bench/        load generator, end-of-run audit, immudb and SQL Server ledger baselines
 tla/          TLA+ models and TLC configs
-results/      raw output of the throughput runs
+results/      raw output of the runs in the paper
 deploy/       Dockerfile, docker-compose.yml, Sigsum test policy
 ```
 
@@ -160,14 +162,45 @@ one rule of the design.
 
 ## Results
 
-`results/throughput/` has the raw output of the throughput runs in the paper (five cloud servers,
-64 vCPUs, NVMe disks). There is one folder per run. `c3` is Accounted, `c2` is Commit-after-DB, `c0`
-is No accounting, `aaa` is Ack-after-anchor and `graph` is the graph alone. The number is the offered
-rate in events/s. The two database baselines are in `immudb_rates` and `sqlledger_rates`.
+`results/` has the raw output of the runs in the paper. In the folder names `c3` is Accounted, `c2`
+is Commit-after-DB, `aaa` is Ack-after-anchor and `c0` is No accounting. `r1`, `r2`, `r3` are
+repeats of the same run.
 
-In a run folder, `r<rate>.json` is the result of the load generator, `audit.json` is the audit after
-the run, `costs.json` has the CPU time and storage per event, and `exposure.json` has the time from
-acknowledgement to anchor.
+| Folder | Runs | In the paper |
+|---|---|---|
+| `throughput/` | offered rates from 500 to 15,000 events/s, the graph alone, immudb and the SQL ledger | Figure 3, Tables 5 and 6 |
+| `faults/` | process and network faults, store outages, and the control run without a fault | Table 4 |
+| `attacks/` | erased tails, forged records, failing appends | Table 4 |
+| `powercuts/` | power cut to the database host or a broker host, at 7,000 events/s (`aaa` at 1,000) | Table 4, Section 6.3, Table 6 |
+| `rollback/` | SQL ledger rolled back to a backup, before and after the next digest | Section 6.6 |
+| `tenants/` | 8, 64 and 512 tenants at 310 events/s | Section 6.5 |
+| `default_period/` | 30 minutes with the default period (360 s) and deadline (300 s) | Section 7 |
+| `isolation/` | one tenant floods a shared partition with 33 (`lo`) or 133 (`hi`) events/s, isolation rule off (`iso0`) and on (`iso1`) | Appendix F |
+
+The throughput runs are from the five cloud servers (64 vCPUs, NVMe disks). Everything else is
+from the five VMs. In `throughput/` the number in a folder name is the offered rate in events/s,
+and `graph` is the graph alone.
+
+In `faults/` and `attacks/` there is one folder per run, named after the system and the fault.
+A `powercuts/` or `tenants/` folder holds all repeats of one setting, so the files there start
+with the run name (for example `T5b_r2.audit.json`).
+
+The files of a run:
+
+- `<run>.json`: result of the load generator (acknowledged and refused events, latencies)
+- `<run>.audit.json`: the audit after the run (replay audit, complaints, period statements, the
+  judge's answers for the 64 sampled receipts)
+- `<run>.costs.json`: CPU time and storage per event
+- `<run>.exposure.json`: time from acknowledgement to anchor
+- `<run>.recovery.json`: when the fault started and ended, and what was refused during it
+- `<run>.verify.json` (baselines): which acknowledged events were still in the database
+- `config.json`: the settings of the run
+
+The other files are snapshots of the containers' CPU and memory (`res_*.txt`), the contract, and
+the sampled receipts. Container logs are not included because of their size.
+
+`tenants/c3/T8_r1` acknowledged less than half of the offered events and is marked `INVALID`. We
+did not use it.
 
 ## License
 

@@ -1,0 +1,5 @@
+{"event":"load_start","t":1794052062.115685605}
+{"event":"database_host_reset","t":1794052171.158894888}
+{"event":"database_host_reachable","t":1794052177.168256265,"detail":"disk power cut: PC_CUT_OK t_cut=1794052171.475958391 target=flakey disks=db probes_gone=1 killed=1 restarted=1"}
+{"event":"database_healthy","t":1794052214.303837476}
+{"event":"drained","t":1794052461.435826611}

@@ -1,0 +1,59 @@
+# t 1793607757.082850035
+cpu app1 compose-worker-4 14329385
+cpu app1 compose-worker-5 14520600
+cpu app1 compose-worker-8 14280438
+cpu app1 compose-worker-12 12842174
+cpu app1 compose-worker-2 14344149
+cpu app1 compose-worker-6 13898410
+cpu app1 compose-worker-1 15014773
+cpu app1 compose-worker-15 13535442
+cpu app1 compose-worker-14 14112053
+cpu app1 compose-worker-9 14390398
+cpu app1 compose-worker-3 14691166
+cpu app1 compose-worker-11 12787322
+cpu app1 compose-worker-10 14301042
+cpu app1 compose-worker-13 13191990
+cpu app1 compose-worker-7 13038722
+cpu app1 compose-worker-16 12962636
+cpu app1 dhakir-maker 1023634
+cpu app1 dhakir-api 152497162
+cpu app2 compose-worker-6 12898112
+cpu app2 compose-worker-2 13269986
+cpu app2 compose-worker-7 12476294
+cpu app2 compose-worker-13 12580447
+cpu app2 compose-worker-9 12128539
+cpu app2 compose-worker-4 12405664
+cpu app2 compose-worker-15 11883464
+cpu app2 compose-worker-8 12338466
+cpu app2 compose-worker-1 12586891
+cpu app2 compose-worker-14 12361117
+cpu app2 compose-worker-10 12215258
+cpu app2 compose-worker-12 12020160
+cpu app2 compose-worker-16 12191779
+cpu app2 compose-worker-3 12389369
+cpu app2 compose-worker-11 12436102
+cpu app2 compose-worker-5 12564547
+cpu infra dhakir-minio 11725134753
+cpu infra dhakir-kafka 17174665905
+cpu infra dhakir-redis 1016923940
+cpu infra dhakir-influx 117676923
+cpu db dhakir-neo4j 3300263454
+neo4j_bytes /data/databases/neo4j 6773094504
+neo4j_bytes /data/transactions/neo4j 2169105347
+minio minio_s3_requests_total{api="getbucketencryption",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="getbucketlifecycle",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="getbucketlocation",server="127.0.0.1:9000"} 3
+minio minio_s3_requests_total{api="getbucketnotification",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="getbucketobjectlockconfig",server="127.0.0.1:9000"} 10
+minio minio_s3_requests_total{api="getbucketpolicy",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="getbucketreplicationconfig",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="getbuckettagging",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="getbucketversioning",server="127.0.0.1:9000"} 2
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 3.707827e+06
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 3.707951e+06
+minio minio_s3_requests_total{api="headbucket",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="listbuckets",server="127.0.0.1:9000"} 2
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 21238
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 2.967589e+06
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 10
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 378435

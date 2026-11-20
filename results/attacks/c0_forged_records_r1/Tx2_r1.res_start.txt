@@ -1,0 +1,48 @@
+# t 1792993264.459426831
+cpu app1 compose-worker-11 13562164
+cpu app1 compose-worker-6 13966170
+cpu app1 compose-worker-15 12682847
+cpu app1 compose-worker-13 11715369
+cpu app1 compose-worker-9 12642910
+cpu app1 compose-worker-4 12335284
+cpu app1 compose-worker-16 12289143
+cpu app1 compose-worker-3 13173751
+cpu app1 compose-worker-14 12546815
+cpu app1 compose-worker-10 11934121
+cpu app1 compose-worker-8 13128235
+cpu app1 compose-worker-5 12914348
+cpu app1 compose-worker-2 12487780
+cpu app1 compose-worker-12 12487509
+cpu app1 compose-worker-1 11728067
+cpu app1 compose-worker-7 11609203
+cpu app1 dhakir-api 141510289
+cpu app2 compose-worker-5 12916869
+cpu app2 compose-worker-11 12683555
+cpu app2 compose-worker-6 12273239
+cpu app2 compose-worker-15 12398235
+cpu app2 compose-worker-14 11885319
+cpu app2 compose-worker-16 12515741
+cpu app2 compose-worker-4 11965131
+cpu app2 compose-worker-8 12378962
+cpu app2 compose-worker-7 11863791
+cpu app2 compose-worker-1 11803661
+cpu app2 compose-worker-3 12282422
+cpu app2 compose-worker-10 12357458
+cpu app2 compose-worker-9 12415183
+cpu app2 compose-worker-13 12133509
+cpu app2 compose-worker-2 12198044
+cpu app2 compose-worker-12 12303937
+cpu infra dhakir-minio 9987203830
+cpu infra dhakir-kafka 5347586453
+cpu infra dhakir-redis 4670757967
+cpu infra dhakir-influx 562350973
+cpu db dhakir-neo4j 2637342337
+neo4j_bytes /data/databases/neo4j 6741649011
+neo4j_bytes /data/transactions/neo4j 2417697919
+minio minio_s3_requests_total{api="getbucketobjectlockconfig",server="127.0.0.1:9000"} 15
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 4.292571e+06
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 4.29272e+06
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 19960
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 3.329375e+06
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 15
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 301689

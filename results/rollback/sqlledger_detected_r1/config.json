@@ -1,0 +1,51 @@
+{
+ "sweep": "baseline_sqlledger.sh",
+ "commit": "c95a4bab0cadaa6637c549f7b15e8548da040523",
+ "written": "2026-10-25T18:14:33+0000",
+ "brokers_declared": {
+  "n_brokers": 1,
+  "hosts": [
+   "192.168.10.163"
+  ],
+  "bootstrap": [
+   "192.168.10.163:9092"
+  ],
+  "replication_factor": 1,
+  "min_insync_replicas": 1
+ },
+ "brokers_live": {
+  "queried": true,
+  "quorum_voters": [
+   1
+  ]
+ },
+ "parameters": {
+  "PARTITIONS": "32",
+  "WORKERS": "12",
+  "CONSUMERS": "4",
+  "CONSUMERS2": "0",
+  "EMITPROCS": "14",
+  "RATE": "600",
+  "TLIST": "1 4 16 64",
+  "REPS": "1",
+  "B": "32",
+  "K": "100",
+  "G": "32",
+  "CONC": "256",
+  "LAGCAP": "10000",
+  "DUR": "210",
+  "WARM": "60",
+  "TESTS": "5d",
+  "AT": "rand",
+  "FAULT_RATE": "100",
+  "RETRY_REFUSED": "6",
+  "MODE": "c3",
+  "ACCT_PERIOD": "90",
+  "ACCT_THETA": "180",
+  "SINKS": "16",
+  "SINKS2": "16",
+  "AUDIT_MODE": "full"
+ },
+ "consistent": true,
+ "problems": []
+}

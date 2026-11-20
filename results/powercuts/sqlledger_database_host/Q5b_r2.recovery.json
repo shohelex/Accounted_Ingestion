@@ -1,0 +1,36 @@
+{
+ "fault": "database_host_reset",
+ "fault_start_s": 96.1,
+ "fault_end_s": 114.2,
+ "fault_lasted_s": 18.2,
+ "marks": [
+  [
+   "database_host_reset",
+   96.1
+  ],
+  [
+   "database_host_reachable",
+   110.2
+  ],
+  [
+   "database_healthy",
+   114.2
+  ]
+ ],
+ "admission_basis": "attempts_by_send_time",
+ "attempts_during_fault": 1330,
+ "not_admitted_during_fault": 1128,
+ "not_admitted_after_fault": 3,
+ "not_admitted_before_fault": 0,
+ "refused_during_fault": 1128,
+ "refused_after_fault": 3,
+ "refused_before_fault": 0,
+ "admission_recovered_s": 3,
+ "admission_status": "recovered",
+ "lag_before_fault_median": 40,
+ "lag_recovered_below": 100,
+ "lag_peak": 18290,
+ "lag_peak_s": 101.0,
+ "backlog_recovered_s": 0.8,
+ "backlog_status": "recovered"
+}

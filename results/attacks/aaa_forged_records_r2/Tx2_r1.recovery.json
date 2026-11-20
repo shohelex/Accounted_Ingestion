@@ -1,0 +1,28 @@
+{
+ "fault": "planted",
+ "fault_start_s": 112.7,
+ "fault_end_s": 112.7,
+ "fault_lasted_s": 0.0,
+ "marks": [
+  [
+   "planted",
+   112.7
+  ]
+ ],
+ "admission_basis": "attempts_by_send_time",
+ "attempts_during_fault": 100,
+ "not_admitted_during_fault": 0,
+ "not_admitted_after_fault": 41,
+ "not_admitted_before_fault": 1,
+ "refused_during_fault": 0,
+ "refused_after_fault": 41,
+ "refused_before_fault": 1,
+ "admission_recovered_s": 1,
+ "admission_status": "recovered",
+ "lag_before_fault_median": 3229,
+ "lag_recovered_below": 6458,
+ "lag_peak": 5231,
+ "lag_peak_s": 119.0,
+ "backlog_recovered_s": 0.3,
+ "backlog_status": "recovered"
+}

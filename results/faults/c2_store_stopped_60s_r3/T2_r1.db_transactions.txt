@@ -1,0 +1,6 @@
+transactionId, clientAddress, status, elapsedTime, activeLockCount, currentQuery
+"neo4j-transaction-749498", "127.0.0.1:56320", "Running", PT0.006S, 0, "SHOW TRANSACTIONS YIELD transactionId, clientAddress, status, elapsedTime, activeLockCount, currentQuery"
+"neo4j-transaction-749495", "192.168.10.181:52948", "Blocked by: [neo4j-transaction-749492]", PT0.083S, 2, "MERGE (l:DhakirLease {name: $name}) SET l.locked_at = timestamp()"
+"neo4j-transaction-749492", "192.168.10.181:58474", "Closing", PT0.265S, 3, ""
+"neo4j-transaction-749493", "192.168.10.181:40888", "Blocked by: [neo4j-transaction-749492]", PT0.138S, 2, "MERGE (l:DhakirLease {name: $name}) SET l.locked_at = timestamp()"
+"neo4j-transaction-749494", "192.168.10.181:54660", "Blocked by: [neo4j-transaction-749492]", PT0.13S, 2, "MERGE (l:DhakirLease {name: $name}) SET l.locked_at = timestamp()"

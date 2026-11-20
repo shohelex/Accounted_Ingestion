@@ -1,0 +1,49 @@
+# t 1793549209.571620115
+cpu app1 compose-worker-4 15524730
+cpu app1 compose-worker-14 14711361
+cpu app1 compose-worker-15 15079034
+cpu app1 compose-worker-3 13959510
+cpu app1 compose-worker-6 13118663
+cpu app1 compose-worker-7 14269136
+cpu app1 compose-worker-10 13112924
+cpu app1 compose-worker-8 14020328
+cpu app1 compose-worker-1 12210518
+cpu app1 compose-worker-13 14455726
+cpu app1 compose-worker-2 13441995
+cpu app1 compose-worker-11 13580997
+cpu app1 compose-worker-16 13566099
+cpu app1 compose-worker-9 14124229
+cpu app1 compose-worker-12 12695994
+cpu app1 compose-worker-5 12479340
+cpu app1 dhakir-maker 1055557
+cpu app1 dhakir-api 282246205
+cpu app2 compose-worker-10 13755675
+cpu app2 compose-worker-6 14318085
+cpu app2 compose-worker-5 14024357
+cpu app2 compose-worker-11 14370782
+cpu app2 compose-worker-14 13780060
+cpu app2 compose-worker-8 15472565
+cpu app2 compose-worker-3 14947876
+cpu app2 compose-worker-7 14959810
+cpu app2 compose-worker-2 13594376
+cpu app2 compose-worker-16 14721257
+cpu app2 compose-worker-15 14884565
+cpu app2 compose-worker-4 15048256
+cpu app2 compose-worker-13 14582880
+cpu app2 compose-worker-12 14322882
+cpu app2 compose-worker-1 16045080
+cpu app2 compose-worker-9 15731626
+cpu infra dhakir-minio 184448004
+cpu infra dhakir-kafka 1362898687
+cpu infra dhakir-redis 73988829
+cpu infra dhakir-influx 5132363
+cpu db dhakir-neo4j 146862998
+neo4j_bytes /data/databases/neo4j 6743553375
+neo4j_bytes /data/transactions/neo4j 2153278467
+minio minio_s3_requests_total{api="getbucketobjectlockconfig",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 279
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 279
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 383
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 21

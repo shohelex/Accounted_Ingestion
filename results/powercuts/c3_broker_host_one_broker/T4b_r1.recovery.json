@@ -1,0 +1,36 @@
+{
+ "fault": "infra_host_reset",
+ "fault_start_s": 114.8,
+ "fault_end_s": 141.3,
+ "fault_lasted_s": 26.5,
+ "marks": [
+  [
+   "infra_host_reset",
+   114.8
+  ],
+  [
+   "infra_host_reachable",
+   126.6
+  ],
+  [
+   "broker_healthy",
+   141.3
+  ]
+ ],
+ "admission_basis": "attempts_by_send_time",
+ "attempts_during_fault": 1960,
+ "not_admitted_during_fault": 1870,
+ "not_admitted_after_fault": 12258,
+ "not_admitted_before_fault": 24,
+ "refused_during_fault": 1870,
+ "refused_after_fault": 12258,
+ "refused_before_fault": 24,
+ "admission_recovered_s": null,
+ "admission_status": "not_recovered",
+ "lag_before_fault_median": 36724,
+ "lag_recovered_below": 73448,
+ "lag_peak": 625646,
+ "lag_peak_s": 325.4,
+ "backlog_recovered_s": null,
+ "backlog_status": "not_recovered"
+}

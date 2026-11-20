@@ -1,0 +1,49 @@
+# t 1793551064.264898131
+cpu app1 compose-worker-15 40361411
+cpu app1 compose-worker-8 55997160
+cpu app1 compose-worker-6 22070620
+cpu app1 compose-worker-16 39522628
+cpu app1 compose-worker-9 38509536
+cpu app1 compose-worker-1 22928711
+cpu app1 compose-worker-2 39183048
+cpu app1 compose-worker-5 32802743
+cpu app1 compose-worker-7 49491633
+cpu app1 compose-worker-3 32709345
+cpu app1 compose-worker-13 37635886
+cpu app1 compose-worker-10 32135173
+cpu app1 compose-worker-14 44181650
+cpu app1 compose-worker-11 33759434
+cpu app1 compose-worker-12 44693554
+cpu app1 compose-worker-4 45582287
+cpu app1 dhakir-maker 8363810
+cpu app1 dhakir-api 4001022836
+cpu app2 compose-worker-7 19271316
+cpu app2 compose-worker-3 28207415
+cpu app2 compose-worker-6 32052015
+cpu app2 compose-worker-9 18653078
+cpu app2 compose-worker-4 27879825
+cpu app2 compose-worker-13 37584813
+cpu app2 compose-worker-15 42271087
+cpu app2 compose-worker-5 31960616
+cpu app2 compose-worker-11 32100031
+cpu app2 compose-worker-8 27323394
+cpu app2 compose-worker-10 28029213
+cpu app2 compose-worker-12 32293962
+cpu app2 compose-worker-2 40931020
+cpu app2 compose-worker-14 45387551
+cpu app2 compose-worker-1 32237104
+cpu app2 compose-worker-16 32096932
+cpu infra dhakir-minio 1544748329
+cpu infra dhakir-kafka 154488281
+cpu infra dhakir-redis 102745011
+cpu infra dhakir-influx 10717695
+cpu db dhakir-neo4j 543853792
+neo4j_bytes /data/databases/neo4j 6757200150
+neo4j_bytes /data/transactions/neo4j 2153396112
+minio minio_s3_requests_total{api="getbucketobjectlockconfig",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="getobject",server="127.0.0.1:9000"} 863940
+minio minio_s3_requests_total{api="getobjectretention",server="127.0.0.1:9000"} 863940
+minio minio_s3_requests_total{api="listobjectsv2",server="127.0.0.1:9000"} 2343
+minio minio_s3_requests_total{api="listobjectversions",server="127.0.0.1:9000"} 477903
+minio minio_s3_requests_total{api="putbucket",server="127.0.0.1:9000"} 1
+minio minio_s3_requests_total{api="putobject",server="127.0.0.1:9000"} 31755

@@ -1,0 +1,3 @@
+transactionId, clientAddress, status, elapsedTime, activeLockCount, currentQuery
+"neo4j-transaction-59256", "192.168.10.151:46422", "Running", PT-0.001S, 0, "UNWIND $q AS q MATCH (n:MerkleNode) USING INDEX n:MerkleNode(tree_id, event_id) WHERE n.tree_id = q.tree_id AND n.event_id = q.eid AND n.leaf_index IS NOT NULL RETURN q.tenant AS tenant, q.eid AS eid, n.leaf_index AS seq, n.data AS data ORDER BY tenant, eid, seq"
+"neo4j-transaction-59249", "127.0.0.1:36826", "Running", PT0.059S, 0, "SHOW TRANSACTIONS YIELD transactionId, clientAddress, status, elapsedTime, activeLockCount, currentQuery"

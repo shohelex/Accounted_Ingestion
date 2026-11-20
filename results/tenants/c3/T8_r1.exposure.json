@@ -1,0 +1,78 @@
+{
+ "acknowledged": 30233,
+ "covered": 30233,
+ "never_covered": 0,
+ "covered_before_ack": 0,
+ "exposure_s": {
+  "p50": 65.653,
+  "p90": 74.905,
+  "p99": 80.338,
+  "max": 103.834,
+  "mean": 58.649
+ },
+ "exposure_signed_s": {
+  "min": 9.397,
+  "p50": 65.653,
+  "max": 103.834
+ },
+ "uncovered_events": {
+  "max": 8245,
+  "max_at_s": 75.1,
+  "mean": 7216.1
+ },
+ "per_tenant": {
+  "tenant_0": {
+   "n": 4159,
+   "p50": 70.076,
+   "p99": 80.755,
+   "max": 82.048
+  },
+  "tenant_1": {
+   "n": 4189,
+   "p50": 67.785,
+   "p99": 78.096,
+   "max": 79.456
+  },
+  "tenant_2": {
+   "n": 2458,
+   "p50": 53.781,
+   "p99": 93.088,
+   "max": 93.732
+  },
+  "tenant_3": {
+   "n": 4325,
+   "p50": 63.518,
+   "p99": 77.592,
+   "max": 78.55
+  },
+  "tenant_4": {
+   "n": 4238,
+   "p50": 68.489,
+   "p99": 80.819,
+   "max": 81.361
+  },
+  "tenant_5": {
+   "n": 4207,
+   "p50": 67.097,
+   "p99": 75.974,
+   "max": 77.316
+  },
+  "tenant_6": {
+   "n": 2469,
+   "p50": 53.855,
+   "p99": 91.023,
+   "max": 91.666
+  },
+  "tenant_7": {
+   "n": 4188,
+   "p50": 68.664,
+   "p99": 79.822,
+   "max": 103.834
+  }
+ },
+ "system": "dhakir",
+ "anchor_mode": "v2",
+ "pairing": "position (receipt v2 pos, anchor pos_last)",
+ "ack_basis": "load generator done time (receipts file)",
+ "cover_basis": "anchor record ts"
+}

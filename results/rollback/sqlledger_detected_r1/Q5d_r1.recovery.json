@@ -1,0 +1,44 @@
+{
+ "fault": "store_backup",
+ "fault_start_s": 150.4,
+ "fault_end_s": 206.8,
+ "fault_lasted_s": 56.5,
+ "marks": [
+  [
+   "store_backup",
+   150.4
+  ],
+  [
+   "store_backup_done",
+   163.8
+  ],
+  [
+   "store_rollback",
+   181.2
+  ],
+  [
+   "store_offline",
+   182.9
+  ],
+  [
+   "store_restored",
+   206.8
+  ]
+ ],
+ "admission_basis": "attempts_by_send_time",
+ "attempts_during_fault": 5700,
+ "not_admitted_during_fault": 0,
+ "not_admitted_after_fault": 0,
+ "not_admitted_before_fault": 0,
+ "refused_during_fault": 0,
+ "refused_after_fault": 0,
+ "refused_before_fault": 0,
+ "admission_recovered_s": 0,
+ "admission_status": "never_lost",
+ "lag_before_fault_median": 71,
+ "lag_recovered_below": 142,
+ "lag_peak": 2726,
+ "lag_peak_s": 209.7,
+ "backlog_recovered_s": 8.9,
+ "backlog_status": "recovered"
+}
